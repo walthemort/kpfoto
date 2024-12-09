@@ -71,7 +71,7 @@ nav .button:hover {
     background-color: #0056b3; /* Mørkere hover-effekt */
 }
 
-/* Placering af billeder i 3 rows */
+                                                    /* Placering af billeder /main indholdet på siden */
 article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -107,7 +107,7 @@ article {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
 }
 
@@ -115,13 +115,42 @@ h1 {
     font-size: 100px;
 }
 
-main {
-    max-width: 1600px; /* Juster bredden som ønsket */
-    margin: 0 auto; /* Centrerer main */
-    padding: 2rem;
-}
 
-/* Responsiv til mobil */
+
+/*CTA */
+section[aria-labelledby="cta-title"] {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #5c89c9;
+    color: #fff;
+    position: relative
+  }
+  
+  section[aria-labelledby="cta-title"] h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    
+  }
+  
+  section[aria-labelledby="cta-title"] p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  section[aria-labelledby="cta-title"] .button {
+    background-color: #fff;
+    color: #5c89c9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  section[aria-labelledby="cta-title"] .button:hover {
+    background-color: #e3eaf5;
+  }
+
+                                                            /* Responsiv til mobil */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -170,18 +199,7 @@ main {
         padding: 0.5rem;
     }
 
-    /* Call to action sektion */
-    section#cta-title h2 {
-        font-size: 1.5rem;
-    }
 
-    section#cta-title p {
-        font-size: 1rem;
-    }
-
-    section#cta-title a.button {
-        padding: 0.8rem 1.5rem;
-    }
 }
 
 /* Responsiv til tablet og større skærme */
@@ -251,6 +269,6 @@ main {
         font-size: 1.5rem;
     }
 
-    /* Call to action sektion */
+
 
 }
