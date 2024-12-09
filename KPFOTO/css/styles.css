@@ -71,6 +71,7 @@ section[aria-labelledby="hero-title"] {
   padding: 60px 20px;
   background-color: #f1f1f1;
   position: relative;
+  z-index: 10
 }
 
 section[aria-labelledby="hero-title"] h1 {
@@ -224,7 +225,9 @@ footer button:hover {
 
 header, main { 
   z-index: 10; 
-  margin-bottom: 320px; /* Skaber plads til footeren */
+  margin-bottom: 340px; /* Skaber plads til footeren */
+  background-color: white;
+  padding: 10px
 }
 
 .placeholder {

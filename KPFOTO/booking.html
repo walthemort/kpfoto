@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book en Fotosession</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+
+</head>
+<body>
+  <!-- Header -->
+
+  <header>
+    <nav>
+      <a href="index.html" aria-label="Home">
+        <img src="assets/img/logo.png" alt="KP Foto logo" />
+      </a>
+      <ul>
+        <li><a href="index.html">Book nu</a></li>
+        <li><a href="services.html">Løsninger</a></li>
+        <li><a href="about.html">Om KP Foto</a></li>
+        <li><a href="contact.html">Kontakt os</a></li>
+      </ul>
+      <a href="booking.html" class="button">Bestil</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section aria-labelledby="hero-title">
+    <h1 id="hero-title">Fang dine <strong>momenter</strong> med os.</h1>
+    <p>Hver stund er værdifuld. Vi hjælper dig med at bevare de øjeblikke, der betyder mest.</p>
+    <p>Fra bryllupper til familieportrætter – vi sikrer, at dine minder varer hele livet.</p>
+  </section>
+
+  <!-- Booking Section -->
+  <main>
+    <section class="booking-section" aria-labelledby="booking-title">
+      <h1 id="booking-title">Book din fotosession</h1>
+      <form id="booking-form">
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" placeholder="Indtast dit navn" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Indtast din e-mail" required />
+
+        <label for="date">Dato:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Tidspunkt:</label>
+        <select id="time" name="time" required>
+          <option value="" disabled selected>Vælg tidspunkt</option>
+          <option value="10:00">10:00</option>
+          <option value="12:00">12:00</option>
+          <option value="14:00">14:00</option>
+          <option value="16:00">16:00</option>
+        </select>
+
+        <label for="service">Vælg service:</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Vælg service</option>
+          <option value="wedding">Bryllupsfotografering</option>
+          <option value="portrait">Portrætfotografering</option>
+          <option value="family">Familiefotografering</option>
+        </select>
+
+        <button type="submit">Book nu</button>
+      </form>
+      <p id="confirmation" class="hidden"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <section>
+      <address>
+        <h2>Kontakt</h2>
+        <p>📞 (+45) 29 66 50 24</p>
+        <p>📧 <a href="mailto:kpfoto@webspeed.dk">kpfoto@webspeed.dk</a></p>
+        <p>CVR: 37172642</p>
+      </address>
+      <section>
+        <h2>Hold dig opdateret</h2>
+        <form action="newsletter.php" method="POST">
+          <label for="email">Tilmeld dig vores nyhedsbrev</label>
+          <input type="email" id="email" name="email" placeholder="Din e-mail" required />
+          <button type="submit">Tilmeld</button>
+        </form>
+      </section>
+    </section>
+    <p>&copy; 2024 KP Foto</p>
+    <script src="js/footer.js"></script>
+    <script src="js/booking.js"></script>
+
+  </footer>
+  </body>
+</html>
