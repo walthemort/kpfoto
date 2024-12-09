@@ -2,54 +2,85 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KP Foto</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
   <!-- Header -->
-
-  <header>
+  <header role="banner">
     <nav>
-      <a href="index.html" aria-label="Home">
-        <img src="assets/img/logo.png" alt="KP Foto logo" />
-      </a>
+      <div class="logo-container">
+        <a href="index.html" aria-label="Home">
+          <img src="assets/img/logo.png" alt="KP Foto logo" />
+        </a>
+      </div>
       <ul>
-        <li><a href="index.html">Book nu</a></li>
-        <li><a href="services.html">Løsninger</a></li>
+        <li><a href="booking.html" class="button-border">Book nu</a></li>
+        <li class="dropdown">
+          <a href="services.html">Løsninger <span class="arrow-down"></span></a>
+          <ul class="submenu">
+            <li><a href="boernefotos.html">Børnefotos</a></li>
+            <li><a href="skolefotos.html">Skolefotos</a></li>
+            <li><a href="bryllupsfoto.html">Bryllupsfoto</a></li>
+            <li><a href="restitution.html">Restitution</a></li>
+            <li><a href="reklamefotos.html">Reklamefotos</a></li>
+            <li><a href="konfirmation.html">Konfirmation</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">Om KP Foto</a></li>
         <li><a href="contact.html">Kontakt os</a></li>
       </ul>
-      <a href="booking.html" class="button">Bestil</a>
+      <div class="nav-right">
+        <a href="booking.html" class="button">Bestil</a>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <!-- Hero Section -->
     <section aria-labelledby="hero-title">
       <h1 id="hero-title">Fang dine <strong>momenter</strong> med os.</h1>
       <p>Hver stund er værdifuld. Vi hjælper dig med at bevare de øjeblikke, der betyder mest.</p>
       <p>Fra bryllupper til familieportrætter – vi sikrer, at dine minder varer hele livet.</p>
       <figure>
-        <img src="/KPFOTO/assets/img/vielsesring.jpg" alt="Billede af vielsesringe" />
+        <img src="assets/img/vielsesring.jpg" alt="Billede af vielsesringe" />
       </figure>
     </section>
 
     <!-- Portfolio Section -->
     <section aria-labelledby="portfolio-title">
-      <h2 id="portfolio-title">Portfolio</h2>
+      <h2 id="portfolio-title">PORTFOLIO</h2>
       <article>
         <figure>
-          <img src="assets/images/child1.jpg" alt="Barn portræt" />
-          <figcaption>Smukke barndomsøjeblikke</figcaption>
+          <div class="img-container">
+            <img src="assets/img/1.png" alt="Barn portræt" />
+          </div>
         </figure>
         <figure>
-          <img src="assets/images/wedding-couple.jpg" alt="Bryllupsbillede" />
-          <figcaption>Bryllupper</figcaption>
+          <div class="img-container">
+            <img src="assets/img/2.png" alt="Bryllupsbillede" />
+          </div>
         </figure>
         <figure>
-          <img src="assets/images/portrait1.jpg" alt="Portrætbillede af mand" />
-          <figcaption>Personlige portrætter</figcaption>
+          <div class="img-container">
+            <img src="assets/img/3.png" alt="Portrætbillede af mand" />
+          </div>
+        </figure>
+        <figure>
+          <div class="img-container">
+            <img src="assets/img/4.png" alt="Portrætbillede af mand" />
+          </div>
+        </figure>
+        <figure>
+          <div class="img-container">
+            <img src="assets/img/5.png" alt="Portrætbillede af mand" />
+          </div>
+        </figure>
+        <figure>
+          <div class="img-container">
+            <img src="assets/img/6.png" alt="Portrætbillede af mand" />
+          </div>
         </figure>
       </article>
     </section>
@@ -57,13 +88,17 @@
     <!-- Call to Action Section -->
     <section aria-labelledby="cta-title">
       <h2 id="cta-title">Fang de øjeblikke, der betyder mest</h2>
-      <p>Book en fotosession i dag og lad os hjælpe dig med at forevige dine minder.</p>
+      <p>Book en fotosession i dag og lad mig hjælpe dig med at forevige minderne, du vil værdsætte for altid.</p>
       <a href="booking.html" class="button">Bestil</a>
+      <a href="booking.html" class="button-border">Book nu</a>
     </section>
   </main>
 
+  <!-- Placeholder for at skabe plads til fast footer -->
+  <div class="placeholder"></div>
+
   <!-- Footer -->
-  <footer>
+  <footer role="contentinfo">
     <section>
       <address>
         <h2>Kontakt</h2>
@@ -75,13 +110,16 @@
         <h2>Hold dig opdateret</h2>
         <form action="newsletter.php" method="POST">
           <label for="email">Tilmeld dig vores nyhedsbrev</label>
-          <input type="email" id="email" name="email" placeholder="Din e-mail" required />
+          <input type="email" id="email" name="email" placeholder="Din e-mail" required aria-label="Indtast din e-mail" />
           <button type="submit">Tilmeld</button>
         </form>
       </section>
     </section>
     <p>&copy; 2024 KP Foto</p>
+    <!-- Tilføj footer.js script -->
     <script src="js/footer.js"></script>
   </footer>
-  </body>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
