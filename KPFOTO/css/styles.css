@@ -22,7 +22,7 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #fff;
+  background-color: #faf9f6;
   padding: 20px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -56,7 +56,7 @@ header nav img {
 
 header nav .button {
   background-color: #5c89c9;
-  color: #fff;
+  color: #faf9f6;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -71,7 +71,7 @@ header nav .button:hover {
 section[aria-labelledby="hero-title"] {
   text-align: center;
   padding: 60px 20px;
-  background-color: #f1f1f1;
+  background-color: #faf9f6;
   position: relative;
   z-index: 11
 }
@@ -177,31 +177,39 @@ footer {
   padding: 40px 20px;
   text-align: center;
   width: 100%;
+  overflow-y: auto; /* Gør det muligt at scrolle inde i footeren, hvis nødvendigt */
 }
 
-footer h2 {
+.footer-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px; /* Plads over logoet */
+}
+
+.footer-column {
+  flex: 1; /* Sørger for, at kolonnerne fordeler pladsen ligeligt */
+  text-align: left;
+}
+
+.footer-column h2 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-footer p {
-  margin: 10px 0;
+.footer-column p {
+  margin: 5px 0;
 }
 
-footer a {
-  color: #5c89c9;
-  text-decoration: none;
+.footer-column form {
+  margin-top: 10px;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer form {
-  margin-top: 20px;
-}
-
-footer input {
+.footer-column input {
   padding: 10px;
   margin-right: 10px;
   border: none;
@@ -210,7 +218,7 @@ footer input {
   color: #414141;
 }
 
-footer button {
+.footer-column button {
   padding: 10px 20px;
   background-color: #5c89c9;
   color: #fff;
@@ -219,21 +227,45 @@ footer button {
   font-weight: bold;
 }
 
-footer button:hover {
+.footer-column button:hover {
   background-color: #476ea5;
 }
+
+.footer-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-logo img {
+  max-width: 400px; /* Juster størrelsen af logoet */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px; /* Adskillelse mellem kolonnerne */
+  }
+}
+
 
 
 
 main { 
   z-index: 10; 
-  margin-bottom: 340px; /* Skaber plads til footeren */
-  background-color: white;
+  margin-bottom: calc(100vh - 350px); /* Dynamisk plads til footeren */  
+  background-color: #faf9f6;
 }
 
 .placeholder {
   z-index: 1;
   height: 350px; /* samme højde som footer */
+  display: none; /* Skjul placeholder i toppen */
 }
 
 footer {
