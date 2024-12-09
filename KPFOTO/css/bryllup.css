@@ -132,6 +132,51 @@
     margin-bottom: 20px;
   }
 
+  /* Bryllup Fotos Section */
+#bryllup-fotos {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #faf9f6;
+  }
+  
+  #bryllup-fotos h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Carousel Styles */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Bryllup fotos Styling */
+.image-container img,
+.carousel img {
+    width: 350px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+  .carousel button {
+    background-color: #5c89c9;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel button:hover {
+    background-color: #476ea5;
+  }
 
   /* Call to Action Section */
 section[aria-labelledby="cta-title"] {
