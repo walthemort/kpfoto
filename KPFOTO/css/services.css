@@ -71,6 +71,8 @@ nav .button:hover {
   background-color: #0056b3; /* Mørkere hover-effekt */
 }
 
+
+
 /* Responsiv til mobil */
 @media (max-width: 768px) {
   nav {
