@@ -4,80 +4,172 @@ body {
     margin: 0;
     padding: 0;
 }
-
-header nav {
+                                                                /* NAV BAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+  
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    box-shadow: none;
+    }
+    
+    /* Juster nav til at flugte med 1200px bredde */
+    header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-}
-
-main section {
-    padding: 2rem;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 2rem;
-}
-
-/* Navbar */
-nav {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrerer nav */
+    padding: 0 20px;
+    }
+    
+    .logo-container {
+    width: 232px; 
+    height: 65px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav .logo img {
-    height: 50px;
-}
-
-nav ul {
+    overflow: hidden;
+    }
+    
+    .logo-container img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0.25);
+    transform-origin: center center;
+    margin-top: 10px;
+    }
+    
+    header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 20px;
+    }
+    
+    header nav ul {
+    display: flex;
+    align-items: center;
     list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #007bff; /* Ændres til brandfarve */
-}
-
-nav .button {
-    background-color: #007bff;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
+    gap: 60px;
+    }
+    
+    /* Pil ved "Løsninger" */
+    .arrow-down {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #414141;
+    border-bottom: 2px solid #414141;
+    transform: rotate(45deg);
+    margin-left: 5px;
+    margin-bottom: 3px;
+    }
+    
+    .dropdown {
+    position: relative;
+    }
+    
+    .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
     border-radius: 5px;
-    font-weight: bold;
-}
-
-nav .button:hover {
-    background-color: #0056b3; /* Mørkere hover-effekt */
-}
+    min-width: 180px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    
+    /* Vigtig: Gør menuen lodret ved at sikre block display */
+    display: block;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 999;
+    }
+    
+    .submenu li {
+    display: block; /* Sørger for at hvert menupunkt står lodret */
+    margin: 0; /* Ingen ekstra gap */
+    }
+    
+    .submenu li a {
+    display: block; /* Gør links til blokke så de fylder hele bredden */
+    padding: 10px 20px;
+    color: #414141;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap; /* For at forhindre at tekst bryder linjen unødvendigt */
+    }
+    
+    .submenu li a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+    }
+    
+    /* Når man hover over forældre-elementet, vis submenu */
+    .dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    }
+    
+    
+    header nav .button {
+    background-color: #5c89c9;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #5c89c9;
+    transition: all 0.3s;
+    }
+    
+    header nav .button:hover {
+    opacity: 50%;
+    }
+    
+    header nav .button-border {
+    border: 2px solid #5c89c9;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #414141;
+    transition: all 0.3s;
+    }
+    header nav .button-border:hover {
+    opacity: 50%;
+    }
+    
+    header.scrolled {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
                                                     /* Placering af billeder /main indholdet på siden */
 article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     justify-items: center; /* Centrerer indholdet i hver grid-celle */
+}
+
+main {
+    margin-top: 180px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .Løsning {
@@ -97,9 +189,7 @@ article {
     cursor: pointer; /* Ændrer cursor til en hånd, når man hover */
 }
 
-.Løsning figcaption {
-    padding-right: 4.5rem;
-}
+
 
 .LæsMere {
     color: #0056b3;
@@ -113,6 +203,10 @@ h1 {
 
 #tekst {
     font-size: 100px;
+}
+
+figcaption.Undertekst {
+    font-size: 5px; 
 }
 
 
@@ -221,11 +315,11 @@ section[aria-labelledby="cta-title"] {
     }
 
     figcaption.Undertekst {
-        font-size: 18px; /* Øg lidt skriftstørrelsen */
+        font-size: 10px; /* Øg lidt skriftstørrelsen */
     }
 
     .LæsMere {
-        font-size: 1.2rem;
+        font-size: 0.5rem;
     }
 
     h1 {

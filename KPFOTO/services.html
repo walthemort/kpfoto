@@ -9,63 +9,77 @@
 <body>
     <header>
         <nav>
-          <a href="index.html" aria-label="Home">
-            <img src="assets/images/logo.png" alt="KP Foto logo" />
-          </a>
-          <ul>
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="services.html">Løsninger</a></li>
-            <li><a href="about.html">Om KP Foto</a></li>
-            <li><a href="contact.html">Kontakt os</a></li>
-          </ul>
-          <a href="booking.html" class="button">Bestil</a>
-        </nav>
+            <div class="logo-container">
+              <a href="index.html" aria-label="Home">
+                <img src="assets/img/logo.png" alt="KP Foto logo" />
+              </a>
+            </div>
+            <ul>
+              <li><a href="booking.html" class="button-border">Book nu</a></li>
+              <li class="dropdown">
+                <a href="services.html">Løsninger <span class="arrow-down"></span></a>
+                <ul class="submenu">
+                  <li><a href="boernefotos.html">Børnefotos</a></li>
+                  <li><a href="skolefotos.html">Skolefotos</a></li>
+                  <li><a href="bryllupsfoto.html">Bryllupsfoto</a></li>
+                  <li><a href="restitution.html">Restitution</a></li>
+                  <li><a href="reklamefotos.html">Reklamefotos</a></li>
+                  <li><a href="konfirmation.html">Konfirmation</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">Om KP Foto</a></li>
+              <li><a href="contact.html">Kontakt os</a></li>
+            </ul>
+            <div class="nav-right">
+              <a href="booking.html" class="button">Bestil</a>
+            </div>
+          </nav>
       </header>
       <main>
         <!-- Hero Section -->
-        <section aria-labelledby="hero-title">
+        <section class="hero">
           <h1><strong>Løsninger</strong></h1>
           <p id="Tekst"> <span>Forevig dine minder med vores</span><span> enestående fotografiske tjenester</span></p>
         
           <article>
             <figure class="Løsning">
-              <img src="assets/img/Børnefotos.webp" alt="Barn portræt" />
+              <img src="assets/img/Børnefotos.webp" alt="Barn portræt"/>
               <h3><strong>Børnefotos</strong></h3>
-              <figcaption class="Undertekst"> KPFoto skaber levende børnebilleder, der fanger barnets unikke personlighed</figcaption>
+              <p class="Undertekst"> KPFoto skaber levende børnebilleder, der fanger barnets unikke personlighed</p>
               <p class="LæsMere">Læs mere</p>
             </figure>
             <figure class="Løsning">
               <img src="assets/img/skolefoto.webp" alt="Portrætbillede af mand" />
               <h3><strong>Skolefotos</strong></h3>
-              <figcaption class="Undertekst">KPFoto leverer levende skolefotografier, der fejrer hver elevs unikke personlighed.</figcaption>
+              <p class="Undertekst">KPFoto leverer levende skolefotografier, der fejrer hver elevs unikke personlighed.</p>
               <p class="LæsMere">Læs mere</p>
             </figure>
             <figure class="Løsning">
               <img src="assets/img/bryllupfoto.webp" alt="Bryllupsbillede " />
               <h3><strong>Bryllupsfoto</strong></h3>
-              <figcaption class="Undertekst">KPFOTO sikrer, at essensen af din særlige dag
-                bliver foreviget og skaber tidløse minder.</figcaption>
+              <p class="Undertekst">KPFOTO sikrer, at essensen af din særlige dag
+                bliver foreviget og skaber tidløse minder.</p>
                 <p class="LæsMere">Læs mere</p>
             </figure>
             <figure class="Løsning">
-                <img src="assets/img/restiutuion.webp" alt="KP portræt" />
+                <img src="assets/img/restiutuion.webp" alt="KP portræt"  />
                 <h3><strong>Restitution</strong></h3>
-                <figcaption class="Undertekst">KPFOTO genopretter dine gamle billeder 
-                    og bringer minderne til live igen.</figcaption>
+                <p class="Undertekst">KPFOTO genopretter dine gamle billeder 
+                    og bringer minderne til live igen.</p>
                 <p class="LæsMere">Læs mere</p>
               </figure>
               <figure class="Løsning">
                 <img src="assets/img/reklamefoto.webp" alt="Reklamebilled" />
                 <h3><strong>Reklamefotos</strong></h3>
-                <figcaption class="Undertekst">KPFOTO leverer professionelle reklamefotos, 
-                    der får dit brand til at skille sig ud.</figcaption>
+                <p class="Undertekst">KPFOTO leverer professionelle reklamefotos, 
+                    der får dit brand til at skille sig ud.</p>
                 <p class="LæsMere">Læs mere</p>
               </figure>
               <figure class="Løsning">
                 <img src="assets/img/konfirmation.webp" alt="Konfirmand" />
                 <h3><strong>Konfirmation</strong></h3>
-                <figcaption class="Undertekst">KPFOTO foreviger din store dag med smukke 
-                    billeder, du vil værdsætte for altid.</figcaption>
+                <p class="Undertekst">KPFOTO foreviger din store dag med smukke 
+                    billeder, du vil værdsætte for altid.</p>
                 <p class="LæsMere">Læs mere</p>
               </figure>
           </article>
@@ -82,5 +96,7 @@
         </section>
       </main>  
       
+
+      <script src="js/main.js"></script>
 </body>
 </html>
