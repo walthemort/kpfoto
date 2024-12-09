@@ -71,8 +71,45 @@ nav .button:hover {
   background-color: #0056b3; /* Mørkere hover-effekt */
 }
 
+/* Placering af billeder i 3 rows */
+article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem; 
+    padding: 2rem 0; 
+  }
+  
+  .Løsning {
+    text-align: left; 
+  }
+  
+  .Løsning img {
+    width: auto; 
+    height: 400px;
+  
+    border-radius: 8px; /* Gør hjørner lidt runde */
+    transition: opacity 0.3s ease; /* Glidende overgang */
+  }
+
+  .Løsning img:hover {
+    opacity: 0.5;  /* Sætter opaciteten til 50% ved hover */
+    cursor: pointer; /* Ændrer cursor til en hånd, når man hover */
+  }
 
 
+  .LæsMere {
+color: #0056b3;
+cursor: pointer;
+
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 4 em;
+  }
 /* Responsiv til mobil */
 @media (max-width: 768px) {
   nav {
@@ -89,4 +126,20 @@ nav .button:hover {
   nav .button {
     margin-top: 1rem;
   }
+  article {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner på mobil */
+  }
+
+  .Løsning img {
+    height: auto;  /* Justér højden på mobil for fleksibilitet */
+    max-height: 200px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  article {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner på større skærme */
+  }
+
 }
