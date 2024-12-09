@@ -4,11 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KP Foto</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <!-- Header -->
-  <?php include 'components/header.html'; ?>
+
+  <header>
+    <nav>
+      <a href="index.html" aria-label="Home">
+        <img src="assets/images/logo.png" alt="KP Foto logo" />
+      </a>
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="services.html">Løsninger</a></li>
+        <li><a href="about.html">Om KP Foto</a></li>
+        <li><a href="contact.html">Kontakt os</a></li>
+      </ul>
+      <a href="booking.html" class="button">Bestil</a>
+    </nav>
+  </header>
 
   <main>
     <!-- Hero Section -->
@@ -49,6 +63,24 @@
   </main>
 
   <!-- Footer -->
-  <?php include 'components/footer.html'; ?>
-</body>
+  <footer>
+    <section>
+      <address>
+        <h2>Kontakt</h2>
+        <p>📞 (+45) 29 66 50 24</p>
+        <p>📧 <a href="mailto:kpfoto@webspeed.dk">kpfoto@webspeed.dk</a></p>
+        <p>CVR: 37172642</p>
+      </address>
+      <section>
+        <h2>Hold dig opdateret</h2>
+        <form action="newsletter.php" method="POST">
+          <label for="email">Tilmeld dig vores nyhedsbrev</label>
+          <input type="email" id="email" name="email" placeholder="Din e-mail" required />
+          <button type="submit">Tilmeld</button>
+        </form>
+      </section>
+    </section>
+    <p>&copy; 2024 KP Foto</p>
+  </footer>
+  </body>
 </html>

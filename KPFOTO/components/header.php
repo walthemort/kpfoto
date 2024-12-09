@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <header>
     <nav>
       <a href="index.html" aria-label="Home">
@@ -12,4 +13,4 @@
       <a href="booking.html" class="button">Bestil</a>
     </nav>
   </header>
-  
+  <?php include("header.php"); ?>
