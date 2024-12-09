@@ -8,20 +8,33 @@
 </head>
 <body>
 
-  <!-- Header -->
-
-  <header>
+   <!-- Header -->
+   <header role="banner">
     <nav>
-      <a href="index.html" aria-label="Home">
-        <img src="assets/img/logo.png" alt="KP Foto logo" />
-      </a>
+      <div class="logo-container">
+        <a href="index.html" aria-label="Home">
+          <img src="assets/img/logo.png" alt="KP Foto logo" />
+        </a>
+      </div>
       <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="services.html">Løsninger</a></li>
+        <li><a href="booking.html" class="button-border">Book nu</a></li>
+        <li class="dropdown">
+          <a href="services.html">Løsninger <span class="arrow-down"></span></a>
+          <ul class="submenu">
+            <li><a href="boernefotos.html">Børnefotos</a></li>
+            <li><a href="skolefotos.html">Skolefotos</a></li>
+            <li><a href="bryllupsfoto.html">Bryllupsfoto</a></li>
+            <li><a href="restitution.html">Restitution</a></li>
+            <li><a href="reklamefotos.html">Reklamefotos</a></li>
+            <li><a href="konfirmation.html">Konfirmation</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">Om KP Foto</a></li>
         <li><a href="contact.html">Kontakt os</a></li>
       </ul>
-      <a href="booking.html" class="button">Bestil</a>
+      <div class="nav-right">
+        <a href="booking.html" class="button">Bestil</a>
+      </div>
     </nav>
   </header>
 <!--Package/Price-->
@@ -83,6 +96,18 @@
         </section>
         <hr class="divider">
       </section>
+
+      <section id="bryllup-fotos">
+        <h2>Bryllup Fotos</h2>
+        <figure class="carousel">
+          <button class="prev" aria-label="Previous Image">&lt;</button>
+          <img src="assets/img/bryllup1.jpeg" alt="Bryllup photo 1" />
+          <button class="next" aria-label="Next Image">&gt;</button>
+        </figure>
+      </section>
+   
+    <hr class="divider">
+  </section>
   
 
  <!-- Call to Action Section -->
@@ -92,3 +117,10 @@
     <a href="booking.html" class="button">Bestil</a>
   </section>
 </main>
+
+
+<!-- Javascript -->
+<script src="js/bryllup.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
