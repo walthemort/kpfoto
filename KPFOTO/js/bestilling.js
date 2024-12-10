@@ -1,33 +1,44 @@
 document.getElementById('kodeForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const kode = document.getElementById('kundeKode').value.trim().toUpperCase();
+    const kode = document.getElementById('kundeKode').value.trim();
     const billedeproeverSection = document.getElementById('billedeproever');
     const billederContainer = document.getElementById('billeder-container');
+    const bestillingsformular = document.getElementById('bestillingsformular');
   
-    // Definer mulige koder og tilhørende billeder
-    const kodeData = {
-      'KODE123': ['assets/img/2.png', 'assets/img/3.png'],
-      'FOTO2024': ['assets/img/sample3.jpg', 'assets/img/sample4.jpg']
+    const koder = {
+      'KODE123': ['2.png', '4.png', '6.png'],
+      'FOTO2024': ['image4.jpg', 'image5.jpg', 'image6.jpg']
     };
   
-    if (kodeData[kode]) {
-      // Vis billedeprøver sektion
+    if (koder[kode]) {
       billedeproeverSection.style.display = 'block';
-      billederContainer.innerHTML = '';
+      bestillingsformular.style.display = 'block';
+      billederContainer.innerHTML = ''; // Ryd tidligere billeder
   
-      // Indsæt billeder for den kode
-      kodeData[kode].forEach(src => {
+      // Indsæt billeder med numre
+      koder[kode].forEach((src, index) => {
+        const figure = document.createElement('figure');
         const img = document.createElement('img');
-        img.src = src;
-        img.alt = 'Billede prøve';
-        billederContainer.appendChild(img);
-      });
+        const caption = document.createElement('figcaption');
   
+        img.src = `assets/img/${src}`;
+        img.alt = `Billede ${index + 1}`;
+        caption.textContent = `Nr. ${index + 1}`;
+  
+        figure.appendChild(img);
+        figure.appendChild(caption);
+        billederContainer.appendChild(figure);
+      });
     } else {
-      // Hvis koden ikke findes, skjul sektionen og giv evt. en besked
-      billedeproeverSection.style.display = 'none';
-      alert('Koden er ikke gyldig. Prøv venligst igen.');
+      alert('Ugyldig kode. Prøv venligst igen.');
     }
+  });
+  
+  // Tilføj flere billeder
+  document.getElementById('tilfoejBillede').addEventListener('click', () => {
+    const container = document.getElementById('billedeBestillingContainer');
+    const newFieldset = document.querySelector('.billedeBestilling').cloneNode(true);
+    container.appendChild(newFieldset);
   });
   

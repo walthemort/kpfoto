@@ -185,6 +185,7 @@ opacity: 50%;
 }
 
 header.scrolled {
+  background-color: #ffffff;
 padding: 10px 0;
 }
 
@@ -466,6 +467,11 @@ nav {
 nav.hidden {
   opacity: 0;
   transform: translateY(-50px);
+  background-color: transparent;
+}
+
+header.hidden {
+  background-color: transparent;
 }
 
 /* Fuld bredde baggrund for sektioner */

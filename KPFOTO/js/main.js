@@ -13,8 +13,10 @@ window.addEventListener('scroll', function() {
   if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 10)) {
     // Tilføj .hidden for at animere nav ud
     nav.classList.add('hidden');
+    header.classList.add('hidden');
   } else {
     // Fjern .hidden for at animere nav ind
     nav.classList.remove('hidden');
+    header.classList.remove('hidden');
   }
 });

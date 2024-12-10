@@ -1,25 +1,40 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/KPFOTO/assets/fonts/Gilroy-Light.otf') format('woff2'),
+         url('/KPFOTO/assets/fonts/Gilroy-ExtraBold.otf') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'GilroyFed';
+    src: url('assets/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('assets/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+  
 /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  /* Generel styling til bestillingssiden */
-  body {
-    font-family: Arial, sans-serif;
+/* Generel styling til bestillingssiden */
+body {
+    font-family: 'Gilroy', sans-serif;
     background-color: #faf9f6;
     color: #414141;
-  }
+}
   
-  main {
+main {
     max-width: 1600px;
-    margin: 140px auto 0 auto; /* plads til fixed header */
     padding: 20px;
-    padding-bottom: 500px;
-  }
+    padding-bottom: 400px;
+}
   
-  .bestilling-section {
+.bestilling-section {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -27,35 +42,43 @@
     margin-bottom: 40px;
     max-width: 800px;
     margin: auto;
-  }
+    text-align: left; /* Sørg for, at tekst er venstrejusteret */
+}
   
-  .bestilling-section h2 {
+.bestilling-section h2 {
     margin-bottom: 10px;
     color: #333;
-    max-width: 300px;
-  }
-
+    max-width: 500px;
+    font-family: 'GilroyFed', sans-serif;
+    font-weight: 700;
+}
   
-  .bestilling-section p {
+.bestilling-section p {
     margin-bottom: 20px;
-  }
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+}
   
-  form {
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
+    align-items: flex-start; /* Sørg for, at indholdet justeres til venstre */
+}
   
-  form input[type="text"],
-  form input[type="email"] {
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
     width: 100%;
     max-width: 400px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+}
   
-  form button[type="submit"] {
+form button[type="submit"] {
     width: fit-content;
     background-color: #5c89c9;
     color: #fff;
@@ -63,29 +86,122 @@
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    font-family: 'GilroyFed', sans-serif;
+    font-weight: 700;
     cursor: pointer;
-  }
+}
   
-  form button[type="submit"]:hover {
+form button[type="submit"]:hover {
     background-color: #476ea5;
-  }
+}
   
-  .billeder-grid {
+/* Kundeoplysninger */
+.kundeoplysninger {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.kundeoplysninger label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.kundeoplysninger input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Billede grid */
+.billeder-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-  }
-  
-  .billeder-grid img {
-    width: 200px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  
-  .bestilling-section form {
-    max-width: 300px; /* Gør formularen smallere */
-    margin: 0 auto;   /* Centrer formularen inden for sektionen */
-  }
+}
 
-  
+.billeder-grid figure {
+    text-align: center;
+    width: 200px; /* Sikrer at billeder og numre står ens */
+}
+
+.billeder-grid img {
+    width: 100%; /* Gør billederne ens i størrelse */
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover; /* Sikrer ensartet størrelse */
+}
+
+.billeder-grid figcaption {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #414141;
+}
+
+/* Billedbestilling */
+.billedeBestilling {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Adskiller bestillinger */
+}
+
+.billedeBestilling:last-child {
+    border-bottom: none;
+}
+
+.billedeBestilling label {
+    font-size: 0.9rem;
+}
+
+.billedeBestilling input,
+.billedeBestilling select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tilføj knap */
+#tilfoejBillede {
+    background-color: #5c89c9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tilfoejBillede:hover {
+    background-color: #476ea5;
+}
+
+/* Generelle knapper */
+button[type="submit"] {
+    background-color: #5c89c9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #476ea5;
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+    .kundeoplysninger {
+        grid-template-columns: 1fr; /* Gør felterne enkeltstående */
+    }
+
+    .billedeBestilling {
+        grid-template-columns: 1fr; /* Gør felterne enkeltstående */
+    }
+}

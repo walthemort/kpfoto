@@ -4,13 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KP Foto Bestilling</title>
-  <!-- Først det originale stylesheet -->
   <link rel="stylesheet" href="css/styles.css"/>
-  <!-- Dernæst det nye stylesheet til bestillingssiden -->
   <link rel="stylesheet" href="css/bestilling.css"/>
 </head>
 <body>
-  <!-- Header (kan beholdes som i originalen, dog uden div) -->
   <header role="banner">
     <nav>
       <div class="logo-container">
@@ -54,19 +51,63 @@
       <h2>Dine billedeprøver</h2>
       <p>Herunder ses de billedeprøver, der hører til den indtastede kode.</p>
       <section id="billeder-container" class="billeder-grid">
-        <!-- Billeder indsættes dynamisk via JS -->
+        <!-- Dynamisk billeder og numre indsættes via JS -->
       </section>
-    </section>
-
-    <!-- Her kan du tilføje flere sektioner for bestilling af ARK, enkeltbilleder, mv. 
-         Hold dem skjult (display:none) indtil en kode er indtastet, ligesom billedeproever-sektionen. 
-         Eksempel: 
-    <section class="bestilling-section" id="ark-typer" style="display:none;">
-      <h2>Vælg dine ARK / Pakker</h2>
-      <!-- Indhold -->
-    </section>
-    -->
-   
+      
+      <section id="bestillingsformular" style="display:none;">
+        <h2>Bestil dine billeder</h2>
+        <form id="bestillingForm">
+          <h3>Kundeoplysninger</h3>
+          <div class="kundeoplysninger">
+            <label for="fornavn">Fornavn:</label>
+            <input type="text" id="fornavn" name="fornavn" placeholder="Dit fornavn" required>
+      
+            <label for="efternavn">Efternavn:</label>
+            <input type="text" id="efternavn" name="efternavn" placeholder="Dit efternavn" required>
+      
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" placeholder="Din adresse" required>
+      
+            <label for="telefon">Telefonnummer:</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="Dit telefonnummer" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Din email" required>
+      
+            <label for="barnetsNavn">Barnets navn:</label>
+            <input type="text" id="barnetsNavn" name="barnetsNavn" placeholder="Barnets navn" required>
+          </div>
+      
+          <h3>Billedbestillinger</h3>
+          <div id="billedeBestillingContainer">
+            <div class="billedeBestilling">
+              <label for="billedeNr">Billede nr.:</label>
+              <input type="text" name="billedeNr[]" placeholder="Billede nr." required>
+      
+              <label for="stoerrelse">Størrelse:</label>
+              <select name="stoerrelse[]">
+                <option value="9x12">9x12</option>
+                <option value="13x18">13x18</option>
+                <option value="18x24">18x24</option>
+                <option value="A4">A4</option>
+                <option value="A3">A3</option>
+                <option value="Poster">Poster</option>
+              </select>
+      
+              <label for="antal">Antal:</label>
+              <input type="number" name="antal[]" placeholder="Antal" min="1" required>
+      
+              <label for="farve">Farve:</label>
+              <input type="checkbox" name="farve[]">
+      
+              <label for="sortHvid">Sort/hvid:</label>
+              <input type="checkbox" name="sortHvid[]">
+            </div>
+          </div>
+          <button type="button" id="tilfoejBillede">Tilføj flere billeder</button>
+          <button type="submit">Send bestilling</button>
+        </form>
+      </section>
   </main>
 
   <footer>
