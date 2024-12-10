@@ -34,7 +34,7 @@
     font-family: 'Gilroy', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #414141;
+    background-color: #faf9f6;
     margin: 0;
   }
   
@@ -196,8 +196,146 @@
     margin-right: auto;
     padding: 0 20px;
     }
+/*MAIN AL SIDENS INDHOLD */
 
-/* Footer*/
+
+  
+  /* Sektionen "KPfoto" */
+  .KPfoto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .KPhvem {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .KPhvem h2 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    background-color: #faf9f6;
+  }
+  
+  .KPhvem p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .kamera {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  .kamera img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sektionen "Mission" */
+  .mission {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .missionPIC {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  .missionPIC img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-text {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .mission-text h2 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    background-color: #faf9f6;
+  }
+  
+  .mission-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsiv design */
+  @media (max-width: 768px) {
+    .KPfoto,
+    .mission {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .KPhvem,
+    .mission-text {
+      text-align: center;
+    }
+  }
+
+
+
+
+
+
+
+/* Call to Action Section */
+section[aria-labelledby="cta-title"] {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #cccccc;
+    color: #414141;
+    }
+    
+    section[aria-labelledby="cta-title"] h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    }
+    
+    section[aria-labelledby="cta-title"] p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    }
+    
+    section[aria-labelledby="cta-title"] .button {
+    background-color: transparent;
+    color: #414141;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    border: 2px solid #5c89c9;
+    margin-right: 10px;
+    transition: all 0.3s;
+    }
+    
+    section[aria-labelledby="cta-title"] .button:hover {
+    opacity: 50%;
+    }
+
+
+                                                                    /* Footer*/
 footer {
     background-color: #414141;
     color: #fff;
