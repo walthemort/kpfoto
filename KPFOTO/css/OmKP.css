@@ -26,7 +26,7 @@
   font-family: 'Gilroy', sans-serif;
   line-height: 1.6;
   color: #414141;
-  background-color: #faf9f6;
+  background-color: #414141;
   margin: 0;
   }
   
@@ -34,179 +34,196 @@
     font-family: 'Gilroy', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #faf9f6;
+
     margin: 0;
   }
   
-  /* Header Styles */
-  header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  background-color: transparent;
-  padding: 20px 0;
-  transition: background-color 0.3s ease, padding 0.3s ease;
-  box-shadow: none;
-  }
-  
-  /* Juster nav til at flugte med 1200px bredde */
-  header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto; /* Centrerer nav */
-  padding: 0 20px;
-  }
-  
-  .logo-container {
-  width: 232px; 
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  }
-  
-  .logo-container img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(0.25);
-  transform-origin: center center;
-  margin-top: 10px;
-  }
-  
-  header nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 20px;
-  }
-  
-  header nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 60px;
-  }
-  
-  /* Pil ved "Løsninger" */
-  .arrow-down {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #414141;
-  border-bottom: 2px solid #414141;
-  transform: rotate(45deg);
-  margin-left: 5px;
-  margin-bottom: 3px;
-  }
-  
-  .dropdown {
-  position: relative;
-  }
-  
-  .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  min-width: 180px;
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  
-  /* Vigtig: Gør menuen lodret ved at sikre block display */
-  display: block;
-  
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-  z-index: 999;
-  }
-  
-  .submenu li {
-  display: block; /* Sørger for at hvert menupunkt står lodret */
-  margin: 0; /* Ingen ekstra gap */
-  }
-  
-  .submenu li a {
-  display: block; /* Gør links til blokke så de fylder hele bredden */
-  padding: 10px 20px;
-  color: #414141;
-  text-decoration: none;
-  font-weight: 500;
-  white-space: nowrap; /* For at forhindre at tekst bryder linjen unødvendigt */
-  }
-  
-  .submenu li a:hover {
-  background-color: #f1f1f1;
-  color: #333;
-  }
-  
-  /* Når man hover over forældre-elementet, vis submenu */
-  .dropdown:hover .submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  }
-  
-  
-  header nav .button {
-  background-color: #5c89c9;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  border: 2px solid #5c89c9;
-  transition: all 0.3s;
-  }
-  
-  header nav .button:hover {
-  opacity: 50%;
-  }
-  
-  header nav .button-border {
-  border: 2px solid #5c89c9;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #414141;
-  transition: all 0.3s;
-  }
-  header nav .button-border:hover {
-  opacity: 50%;
-  }
-  
-  header.scrolled {
-  background-color: #ffffff;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-
-  main {
-    margin-top: 120px;
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #faf9f6;
+    padding: 20px 0;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    box-shadow: none;
+    }
+    
+    /* Juster nav til at flugte med 1200px bredde */
+    header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto; /* Centrerer nav */
     padding: 0 20px;
     }
+    
+    .logo-container {
+    width: 232px; 
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    }
+    
+    .logo-container img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0.25);
+    transform-origin: center center;
+    margin-top: 10px;
+    }
+    
+    header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 20px;
+    }
+    
+    header nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    }
+    
+    /* Pil ved "Løsninger" */
+    .arrow-down {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #414141;
+    border-bottom: 2px solid #414141;
+    transform: rotate(45deg);
+    margin-left: 5px;
+    margin-bottom: 3px;
+    }
+    
+    .dropdown {
+    position: relative;
+    }
+    
+    .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    min-width: 180px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    
+    /* Vigtig: Gør menuen lodret ved at sikre block display */
+    display: block;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 999;
+    }
+    
+    .submenu li {
+    display: block; /* Sørger for at hvert menupunkt står lodret */
+    margin: 0; /* Ingen ekstra gap */
+    }
+    
+    .submenu li a {
+    display: block; /* Gør links til blokke så de fylder hele bredden */
+    padding: 10px 20px;
+    color: #414141;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap; /* For at forhindre at tekst bryder linjen unødvendigt */
+    }
+    
+    .submenu li a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+    }
+    
+    /* Når man hover over forældre-elementet, vis submenu */
+    .dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    }
+    
+    
+    header nav .button {
+    background-color: #5c89c9;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #5c89c9;
+    transition: all 0.3s;
+    }
+    
+    header nav .button:hover {
+    opacity: 50%;
+    }
+    
+    header nav .button-border {
+    border: 2px solid #5c89c9;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #414141;
+    transition: all 0.3s;
+    }
+    header nav .button-border:hover {
+    opacity: 50%;
+    }
+    
+    header.scrolled {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
 /*MAIN AL SIDENS INDHOLD */
 
+/* Hero */
+.OMKP {
+    background-color: #faf9f6; /* Lys baggrundsfarve */
+    font-size: 3rem; /* Større tekst */
+    margin-top: 100px; /* Margen ovenfor elementet */
+    padding: 20px; /* Indvendig afstand */
+    max-width: 1200px; /* Maksimal bredde for at holde elementet indenfor en grænse */
+    margin-left: auto; /* Centrer elementet horisontalt */
+    margin-right: auto; /* Centrer elementet horisontalt */
+    text-align: center;
+}
+
+.OMKP h1 {
+    font-size: 4rem; /* Større overskrift */
+    color: #333; /* Mørk tekstfarve */
+    margin-bottom: 20px; 
+    border-bottom: 3px solid #000; 
+    padding-bottom: 10px; 
+}
+
+.OMKP h1 {
+    font-size: 4rem; /* Større overskrift */
+    color: #333; /* Mørk tekstfarve */
+    margin-bottom: 80px; /* Afstand under overskriften */
+}
 
   
   /* Sektionen "KPfoto" */
   .KPfoto {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 120px;
   }
   
   .KPhvem {
@@ -218,12 +235,11 @@
   
   .KPhvem h2 {
     font-size: 1.5rem;
-    color: #0056b3;
+
     background-color: #faf9f6;
   }
   
   .KPhvem p {
-    font-size: 1rem;
     line-height: 1.6;
   }
   
@@ -231,27 +247,39 @@
     flex: 1 1 300px;
     max-width: 500px;
     padding: 20px;
+    margin-right: 100px;
   }
   
   .kamera img {
     width: 100%;
-    height: auto;
+    height: 300px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
+
+.størrelse { /* størrelse på teksterne */
+    font-size: 14.5px;
+    line-height: 1.8;
+}
+
+span {
+    color: #0056b3;
+}
+
   /* Sektionen "Mission" */
+
   .mission {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
   }
   
   .missionPIC {
     flex: 1 1 300px;
     max-width: 500px;
-    padding: 20px;
   }
   
   .missionPIC img {
@@ -259,6 +287,7 @@
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 200px;
   }
   
   .mission-text {
@@ -266,18 +295,17 @@
     max-width: 500px;
     padding: 20px;
     text-align: left;
+    margin-left: 160px;
+    margin-top: -380px;
   }
   
   .mission-text h2 {
     font-size: 1.5rem;
-    color: #0056b3;
+
     background-color: #faf9f6;
   }
   
-  .mission-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+
   
   /* Responsiv design */
   @media (max-width: 768px) {
@@ -292,10 +320,6 @@
       text-align: center;
     }
   }
-
-
-
-
 
 
 
@@ -372,7 +396,9 @@ footer {
   footer h2 {
     font-size: 3.5rem;
     margin-bottom: 10px;
+    color: white;
   }
+
   
   footer p {
     font-size: 1.5rem;
