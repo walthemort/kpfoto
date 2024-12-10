@@ -190,6 +190,11 @@ padding: 10px 0;
 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+header.bottom {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Centrer hele main og sektioner til samme bredde som nav/portfolio */
 main {
 margin-top: 120px;
@@ -452,3 +457,15 @@ main {
   height: 450px; /* samme højde som footer */
   display: none; /* Skjul placeholder i toppen */
 }
+
+nav {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav.hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+

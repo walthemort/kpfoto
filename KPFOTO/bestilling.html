@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KP Foto</title>
+  <title>KP Foto Bestilling</title>
+  <!-- Først det originale stylesheet -->
   <link rel="stylesheet" href="css/styles.css"/>
+  <!-- Dernæst det nye stylesheet til bestillingssiden -->
+  <link rel="stylesheet" href="css/bestilling.css"/>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header (kan beholdes som i originalen, dog uden div) -->
   <header role="banner">
     <nav>
       <div class="logo-container">
@@ -37,61 +40,33 @@
     </nav>
   </header>
 
-  <main role="main">
-    <!-- Hero Section -->
-    <section aria-labelledby="hero-title">
-      <h1 id="hero-title">Fang dine <strong>momenter</strong> med os.</h1>
-      <p>Hver stund er værdifuld. Vi hjælper dig med at bevare de øjeblikke, der betyder mest.</p>
-      <p>Fra bryllupper til familieportrætter – vi sikrer, at dine minder varer hele livet.</p>
-      <figure>
-        <img src="assets/img/vielsesring.jpg" alt="Billede af vielsesringe" />
-      </figure>
+  <main>
+    <section class="bestilling-section" id="kode-indtastning">
+      <h2>Indtast din personlige kode</h2>
+      <p>For at se dine personlige billedprøver, skal du indtaste din kode herunder.</p>
+      <form id="kodeForm">
+        <input type="text" id="kundeKode" name="kundeKode" placeholder="Indtast din kode (f.eks. KODE123)" required />
+        <button type="submit">Se dine billedeprøver</button>
+      </form>
+    </section>
+    
+    <section class="bestilling-section" id="billedeproever" style="display:none;">
+      <h2>Dine billedeprøver</h2>
+      <p>Herunder ses de billedeprøver, der hører til den indtastede kode.</p>
+      <section id="billeder-container" class="billeder-grid">
+        <!-- Billeder indsættes dynamisk via JS -->
+      </section>
     </section>
 
-    <!-- Portfolio Section -->
-    <section aria-labelledby="portfolio-title">
-      <h2 id="portfolio-title">PORTFOLIO</h2>
-      <article>
-        <figure>
-          <div class="img-container">
-            <img src="assets/img/1.png" alt="Barn portræt" />
-          </div>
-        </figure>
-        <figure>
-          <div class="img-container">
-            <img src="assets/img/2.png" alt="Bryllupsbillede" />
-          </div>
-        </figure>
-        <figure>
-          <div class="img-container">
-            <img src="assets/img/3.png" alt="Portrætbillede af mand" />
-          </div>
-        </figure>
-        <figure>
-          <div class="img-container">
-            <img src="assets/img/4.png" alt="Portrætbillede af mand" />
-          </div>
-        </figure>
-        <figure>
-          <div class="img-container">
-            <img src="assets/img/5.png" alt="Portrætbillede af mand" />
-          </div>
-        </figure>
-        <figure>
-          <div class="img-container">
-            <img src="assets/img/6.png" alt="Portrætbillede af mand" />
-          </div>
-        </figure>
-      </article>
+    <!-- Her kan du tilføje flere sektioner for bestilling af ARK, enkeltbilleder, mv. 
+         Hold dem skjult (display:none) indtil en kode er indtastet, ligesom billedeproever-sektionen. 
+         Eksempel: 
+    <section class="bestilling-section" id="ark-typer" style="display:none;">
+      <h2>Vælg dine ARK / Pakker</h2>
+      <!-- Indhold -->
     </section>
-
-    <!-- Call to Action Section -->
-    <section aria-labelledby="cta-title">
-      <h2 id="cta-title">Fang de øjeblikke, der betyder mest</h2>
-      <p>Book en fotosession i dag og lad mig hjælpe dig med at forevige minderne, du vil værdsætte for altid.</p>
-      <a href="booking.html" class="button">Bestil</a>
-      <a href="booking.html" class="button-border">Book nu</a>
-    </section>
+    -->
+   
   </main>
 
   <footer>
@@ -115,10 +90,11 @@
       <img src="assets/img/iconlogowh.png" alt="KP Foto logo 1" />
       <img src="assets/img/textlogowh.png" alt="KP Foto logo 2" />
     </div>
-    <p class="copyright">&copy; 2024 KP Foto</p>
+    <p>&copy; 2024 KP Foto</p>
   </footer>
-  
-  
-  
-  </body>
+
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/bestilling.js"></script>
+</body>
 </html>

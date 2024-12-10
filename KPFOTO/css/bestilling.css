@@ -1,0 +1,91 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Generel styling til bestillingssiden */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #faf9f6;
+    color: #414141;
+  }
+  
+  main {
+    max-width: 1600px;
+    margin: 140px auto 0 auto; /* plads til fixed header */
+    padding: 20px;
+    padding-bottom: 500px;
+  }
+  
+  .bestilling-section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .bestilling-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+    max-width: 300px;
+  }
+
+  
+  .bestilling-section p {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button[type="submit"] {
+    width: fit-content;
+    background-color: #5c89c9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #476ea5;
+  }
+  
+  .billeder-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .billeder-grid img {
+    width: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .bestilling-section form {
+    max-width: 300px; /* Gør formularen smallere */
+    margin: 0 auto;   /* Centrer formularen inden for sektionen */
+  }
+
+  
