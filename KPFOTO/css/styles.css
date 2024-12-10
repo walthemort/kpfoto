@@ -27,8 +27,8 @@
 body {
 font-family: 'Gilroy', sans-serif;
 line-height: 1.6;
-color: #414141;
-background-color: #faf9f6;
+background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 27%, rgba(65,65,65,1) 52%, rgba(65,65,65,1) 76%);
 margin: 0;
 }
 
@@ -185,9 +185,7 @@ opacity: 50%;
 }
 
 header.scrolled {
-background-color: #ffffff;
 padding: 10px 0;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header.bottom {
@@ -230,6 +228,7 @@ margin-bottom: 20px;
 section[aria-labelledby="hero-title"] figure {
 margin: 40px 0; /* Giv lidt luft over og under billedet */
 width: 100%; /* Fylder hele containerens bredde */
+
 }
 
 section[aria-labelledby="hero-title"] img {
@@ -469,3 +468,23 @@ nav.hidden {
   transform: translateY(-50px);
 }
 
+/* Fuld bredde baggrund for sektioner */
+section[aria-labelledby="hero-title"], 
+section[aria-labelledby="portfolio-title"], 
+section[aria-labelledby="cta-title"] {
+  width: 100vw; /* Sikrer, at baggrunden strækker sig over hele vinduet */
+  position: relative;
+  left: 50%; /* For at modvirke margin-auto på parent */
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Tilpas indhold i sektionerne */
+section[aria-labelledby="hero-title"] > *,
+section[aria-labelledby="portfolio-title"] > *,
+section[aria-labelledby="cta-title"] > * {
+  max-width: 1200px;
+  margin: 0 auto; /* Centrerer indhold */
+  padding: 20px; /* Giver indholdet luft */
+}
