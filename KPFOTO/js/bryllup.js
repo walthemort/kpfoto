@@ -2,7 +2,7 @@ const images = [
     "assets/img/bryllup1.jpeg",
     "assets/img/bryllup2.jpeg",
     "assets/img/bryllup3.jpeg",
-    "assets/img/bryllup4.jpeg"
+    "assets/img/bryllup2.jpeg"
    
     
   ];
