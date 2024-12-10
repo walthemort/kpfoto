@@ -178,33 +178,35 @@ header {
   }
   
   hr.divider {
-    width: 1250px;
+    width: 1150px;
     height: 2px;
     background-color: #333;
     margin: 10px auto;
   }
   
   .subtext1, .subtext2 {
-    font-size: 1rem;
+    font-size: 16px;
     color: #333;
     font-weight: 400;
-    text-align: center;
+    text-align:center;
     margin-bottom: 20px;
-    padding-left: 195px;
-    padding-right: 195px;
+    margin-top: 50px;
+    padding-left: 295px;
+    padding-right: 295px;
   }
-  
+
   /* Image Section */
   .images-and-pakke {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Space between images */
-    margin-bottom: 40px;
+    gap: 100px; /* Space between images */
+    margin-bottom: 100px;
+    margin-top: 75px;
   }
   
   .image-container {
-    width: 45%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 400px;
   }
   
   .image-container img {
@@ -217,31 +219,34 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
   }
   
   .pakke {
-    width: 25%;
-    max-width: 300px;
-    text-align: center;
+    width: 40%;
+    text-align: left;
   }
   
   .pakke h3 {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #333;
     margin-bottom: 10px;
+    margin-left: 110px;
+    margin-right: 110px;
   }
   
   .pakke p {
-    font-size: 1rem;
+    font-size: 12px;
     color: #333;
     margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   /* Bryllup Fotos Section */
 #bryllup-fotos {
     text-align: center;
-    padding: 40px 20px;
+    margin-bottom: 120px;
     background-color: #faf9f6;
   }
   
