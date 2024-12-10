@@ -199,7 +199,32 @@
   padding: 0 20px;
   }
 
-/* Style for the main FAQ container */
+  /* Kontakt tekst*/
+  main h1 {
+    font-size: 3em; 
+    margin-bottom: 20px; 
+    text-align: center;
+    color: #333; 
+}
+
+
+main p {
+    font-size: 1rem; 
+    margin-bottom: 10px; 
+    text-align: center;
+    color: #333; 
+    line-height: 2.5; 
+  }
+
+  hr.divider {
+    width: 1150px;
+    height: 2px;
+    background-color: #333;
+    margin: 10px auto;
+    margin-bottom: 20px;
+  }
+
+/* main FAQ container */
 .faq-container {
     max-width: 800px; 
     margin: 50px auto; 
@@ -214,14 +239,14 @@
     color: #333;
   }
   
-  /* Styling af FAQ box */
+  /* FAQ box */
   .faq-item {
     border: 1px solid #5c89c9;
 
     overflow: hidden; 
   }
   
-  /* Style for the question buttons */
+  /* question buttons */
   .faq-question {
     background-color: #faf9f6; 
     width: 100%;
