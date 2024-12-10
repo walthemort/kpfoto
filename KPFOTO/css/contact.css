@@ -199,6 +199,76 @@
   padding: 0 20px;
   }
 
+/* Style for the main FAQ container */
+.faq-container {
+    max-width: 800px; 
+    margin: 50px auto; 
+    padding: 20px;
+    color: #333; 
+  }
+  
+  
+  .faq-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Styling af FAQ box */
+  .faq-item {
+    border: 1px solid #5c89c9;
+
+    overflow: hidden; 
+  }
+  
+  /* Style for the question buttons */
+  .faq-question {
+    background-color: #faf9f6; 
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease; 
+  }
+  
+  /* Hover effect */
+  .faq-question:hover {
+    background-color: #d0d7de; 
+  }
+  
+  
+  .faq-question .arrow {
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease; 
+  }
+  
+  /* Rotate */
+  .faq-question.active .arrow {
+    transform: rotate(180deg); 
+  }
+  
+  /* Answer */
+  .faq-answer {
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+    background-color: #fff; 
+  }
+  
+  /* answer */
+  .faq-answer p {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 2; 
+    color: #333; 
+  }
+  
+ 
   /* Call to Action Section */
 section[aria-labelledby="cta-title"] {
     text-align: center;
