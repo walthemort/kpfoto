@@ -28,7 +28,7 @@ body {
 font-family: 'Gilroy', sans-serif;
 line-height: 1.6;
 background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,1) 27%, rgba(65,65,65,1) 52%, rgba(65,65,65,1) 76%);
+background: linear-gradient(180deg, rgba(250, 249, 246, 1) 27%, rgba(65,65,65,1) 52%, rgba(65,65,65,1) 76%);
 margin: 0;
 }
 
