@@ -169,7 +169,6 @@ main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .Løsning {
@@ -199,6 +198,7 @@ main {
 h1 {
     font-size: 3rem;
     margin: 0;
+    margin-top: -60px;
 }
 
 #tekst {
@@ -297,72 +297,4 @@ section[aria-labelledby="cta-title"] {
 }
 
 /* Responsiv til tablet og større skærme */
-@media (max-width: 1024px) {
-    header nav {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-    }
 
-    article {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolonner på tablet */
-        gap: 1.5rem;
-    }
-
-    .Løsning img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    figcaption.Undertekst {
-        font-size: 10px; /* Øg lidt skriftstørrelsen */
-    }
-
-    .LæsMere {
-        font-size: 0.5rem;
-    }
-
-    h1 {
-        font-size: 3rem; /* Justeret størrelse på h1 */
-    }
-
-    #Tekst {
-        font-size: 1.2rem;
-    }
-
-    /* Call to action sektion */
-
-}
-
-/* Større skærme (desktop) */
-@media (min-width: 1025px) {
-    header nav {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2rem 4rem;
-    }
-
-    article {
-        grid-template-columns: repeat(3, 1fr); /* 3 kolonner på større skærme */
-        gap: 2rem;
-    }
-
-    figcaption.Undertekst {
-        font-size: 20px; /* Øg skriftstørrelsen på desktop */
-    }
-
-    .LæsMere {
-        font-size: 1.3rem;
-    }
-
-    h1 {
-        font-size: 4rem; /* Justeret størrelse på h1 */
-    }
-
-    #Tekst {
-        font-size: 1.5rem;
-    }
-
-
-
-}
