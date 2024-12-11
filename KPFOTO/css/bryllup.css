@@ -1,3 +1,20 @@
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/KPFOTO/assets/fonts/Gilroy-Light.otf') format('woff2'),
+       url('/KPFOTO/assets/fonts/Gilroy-ExtraBold.otf') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GilroyFed';
+  src: url('assets/fonts/Gilroy-Bold.woff2') format('woff2'),
+       url('assets/fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* Reset Styles */
 * {
     margin: 0;
@@ -164,13 +181,13 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
- /* General Layout for Bryllup Løsninger */
+ /* Layout for Bryllup Løsninger */
 #bryllup-løsninger {
     text-align: center;
     padding: 40px 20px;
   }
   
-  #bryllup-løsninger h2 {
+  #bryllup-løsninger h1 {
     font-size: 3rem;
     color: #333;
     margin-bottom: 10px;
@@ -181,80 +198,135 @@ header {
     width: 1150px;
     height: 2px;
     background-color: #333;
+    
     margin: 10px auto;
   }
-  
-  .subtext1, .subtext2 {
-    font-size: 16px;
-    color: #333;
-    font-weight: 400;
-    text-align:center;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    padding-left: 295px;
-    padding-right: 295px;
+
+  /* Styling af billeder og pakkeløsninger */
+
+    .førstepakker {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin-left: 120px;
+      margin-top: 80px;
+    }
+    
+    .Pakke {
+      max-width: 550px; 
+      margin: 20px auto; 
+      text-align: left; 
+      margin-top: 60px;
+  }
+    
+    .Pakke h3 {
+      font-size: 1.5rem;
+      background-color: #faf9f6;
+    }
+    
+    .Pakke p {
+      line-height: 1.6;
+    }
+    
+    .par {
+      flex: 1 1 300px;
+      max-width: 500px;
+      padding: 20px;
+      margin-right: 100px;
+    }
+    
+    .par img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .størrelse {
+      font-size: 14.5px;
+      line-height: 1.8; 
+      text-align: center; /* Centertekst */
+      max-width: 800px; /* Sikrer, at teksten ikke bliver for bred */
+      margin: 0 auto; /* Centrerer teksten i forhold til sektionen */
   }
 
-  /* Image Section */
-  .images-and-pakke {
-    display: flex;
-    justify-content: center;
-    gap: 100px; /* Space between images */
-    margin-bottom: 100px;
-    margin-top: 75px;
-  }
-  
-  .image-container {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Pakke Section */
-  .pakke-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 50px;
-  }
-  
-  .pakke {
-    width: 40%;
-    text-align: left;
-  }
-  
-  .pakke h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-    margin-left: 110px;
-    margin-right: 110px;
-  }
-  
-  .pakke p {
-    font-size: 12px;
-    color: #333;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
 
-  /* Bryllup Fotos Section */
-#bryllup-fotos {
+  h3 {
     text-align: center;
-    margin-bottom: 120px;
-    background-color: #faf9f6;
+  }
+
+  .price {
+    text-align: center;
+    color: #0056b3;
+    margin-top: 30px;
   }
   
-  #bryllup-fotos h2 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 20px;
+  
+  
+    /* Sektionen  med 3-4 pakker */
+  
+    .andenpakker {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+
+    }
+    
+    .parto {
+      flex: 1 1 300px;
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto; /* Centrerer billedet */
+      margin-bottom: 50px; 
   }
+  
+  .parto img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-text {
+      flex: 1 1 300px;
+      max-width: 700px;
+      margin: 0 auto; 
+      padding: 20px;
+      text-align: center; /* Centrerer teksten */
+      margin-left: 0;
+      margin-top: -200px;
+  }
+  
+ 
+/* Bryllup fotos header */
+
+.bryllup {
+  background-color: #faf9f6; /* Lys baggrundsfarve */
+  font-size: 3rem; /* Større tekst */
+  padding: 20px; 
+  max-width: 1200px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center;
+}
+
+.bryllup h1 {
+  font-size: 4rem; 
+  color: #333; 
+  margin-bottom: 20px; 
+  border-bottom: 1px solid #000; 
+  padding-bottom: 10px; 
+}
+
+.bryllup h1 {
+  font-size: 4rem; 
+  color: #333; 
+  margin-bottom: 80px; 
+}
+
+
+  
   
   /* Carousel Styles */
 .carousel {
