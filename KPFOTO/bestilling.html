@@ -2,21 +2,31 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KP Foto Bestilling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bestil professionelle billeder hos KP Foto. Tilpas dine ordrer med forskellige størrelser, farver og stilarter. Perfekt til børnefotos, bryllupper, skolefotos og reklame." />
+  <meta name="keywords" content="billeder, KP Foto, bestilling, professionelle billeder, børnefotos, bryllupsfotos, skolefotos, reklamefotos" />
+  <meta name="robots" content="index, follow" />
+  <title>Bestil Professionelle Billeder - KP Foto</title>
+  <link rel="canonical" href="https://www.kpfoto.dk/bestilling.html" />
+
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon/favicon48x48.png">
+
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="stylesheet" href="css/bestilling.css"/>
   <link rel="stylesheet" href="css/transition.css"/>
 
+  <meta name="author" content="KP Foto, Felix Djurhuus, Jonathan Walther, Victor Vorning, Oscar Adam Hansen, Keld Pedersen"/>
+
 </head>
 <body>
+  <!-- Header -->
   <header role="banner">
     <nav>
-      <div class="logo-container">
+      <figure class="logo-container">
         <a href="index.html" aria-label="Home">
           <img src="assets/img/logo.png" alt="KP Foto logo" />
         </a>
-      </div>
+      </figure>
       <ul>
         <li><a href="booking.html" class="button-border">Book nu</a></li>
         <li class="dropdown">
@@ -33,13 +43,18 @@
         <li><a href="OmKP.html">Om KP Foto</a></li>
         <li><a href="contact.html">Kontakt os</a></li>
       </ul>
-      <div class="nav-right">
-        <a href="bestilling.html" class="button">Bestil billeder <img src="assets/icons/plusicon.png" alt="Plus ikon" class="plus-icon" /></a>
-      </div>
+      <aside class="nav-right">
+        <a href="bestilling.html" class="button">
+          Bestil billeder 
+          <img src="assets/icons/plusicon.png" alt="Plus ikon" class="plus-icon" />
+        </a>
+      </aside>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- Kode Indtastning Sektion -->
     <section class="bestilling-section" id="kode-indtastning">
       <h2>Indtast din personlige kode</h2>
       <p>For at se dine personlige billedprøver, skal du indtaste din kode herunder.</p>
@@ -49,6 +64,7 @@
       </form>
     </section>
     
+    <!-- Billedeprøver Sektion -->
     <section class="bestilling-section" id="billedeproever" style="display:none;">
       <h2>Dine billedeprøver</h2>
       <p>Herunder ses de billedeprøver, der hører til den indtastede kode.</p>
@@ -56,11 +72,14 @@
         <!-- Dynamisk billeder og numre indsættes via JS -->
       </section>
       
+      <!-- Bestillingsformular Sektion -->
       <section id="bestillingsformular" style="display:none;">
         <h2>Bestil dine billeder</h2>
         <form id="bestillingForm">
           <h3>Kundeoplysninger</h3>
-          <div class="kundeoplysninger">
+          <fieldset class="kundeoplysninger">
+            <legend>Kundeoplysninger</legend>
+            
             <label for="fornavn">Fornavn:</label>
             <input type="text" id="fornavn" name="fornavn" placeholder="Dit fornavn" required>
       
@@ -78,11 +97,11 @@
       
             <label for="barnetsNavn">Barnets navn:</label>
             <input type="text" id="barnetsNavn" name="barnetsNavn" placeholder="Barnets navn" required>
-          </div>
+          </fieldset>
       
           <h3>Billedbestillinger</h3>
-          <div id="billedeBestillingContainer">
-            <div class="billedeBestilling">
+          <section id="billedeBestillingContainer" class="billede-bestilling-container">
+            <article class="billedeBestilling">
               <label for="billedeNr">Billede nr.:</label>
               <input type="text" name="billedeNr[]" placeholder="Billede nr." required>
       
@@ -104,12 +123,13 @@
       
               <label for="sortHvid">Sort/hvid:</label>
               <input type="checkbox" name="sortHvid[]">
-            </div>
-          </div>
+            </article>
+          </section>
           <button type="button" id="tilfoejBillede">Tilføj flere billeder</button>
           <button type="submit">Send bestilling</button>
         </form>
       </section>
+    </section>
   </main>
 
   <footer>
