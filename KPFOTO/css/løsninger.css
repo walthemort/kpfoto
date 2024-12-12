@@ -361,41 +361,6 @@ header {
     background-color: #476ea5;
   }
 
-  /* Call to Action Section */
-  section[aria-labelledby="cta-title"] {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #cccccc;
-    color: #414141;
-    }
-    
-    section[aria-labelledby="cta-title"] h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    }
-    
-    section[aria-labelledby="cta-title"] p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    }
-    
-    section[aria-labelledby="cta-title"] .button {
-    background-color: transparent;
-    color: #414141;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 700;
-    border: 2px solid #5c89c9;
-    margin-right: 10px;
-    transition: all 0.3s;
-    }
-    
-    section[aria-labelledby="cta-title"] .button:hover {
-    opacity: 50%;
-    }
-
   /* Footer Styles */
 footer {
   background-color: #414141;
