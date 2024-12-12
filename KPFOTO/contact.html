@@ -6,6 +6,8 @@
   <title>KP Foto</title>
   <link rel="stylesheet" href="css/contact.css"/>
   <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/transition.css"/>
+
 </head>
 <body>
     
@@ -34,7 +36,7 @@
         <li><a href="contact.html">Kontakt os</a></li>
       </ul>
       <div class="nav-right">
-        <a href="bestilling.html" class="button">Bestil</a>
+        <a href="bestilling.html" class="button">Bestil billeder <img src="assets/icons/plusicon.png" alt="Plus ikon" class="plus-icon" /></a>
       </div>
     </nav>
   </header>
@@ -45,7 +47,7 @@
         <h1>Kontakt os</h1>
         <hr class="divider">
         <p>
-          Har du spørgsmål, eller ønsker du at komme i kontakt med os? Vi står klar til at hjælpe dig. Udfyld formularen nedenfor, eller brug de angivne kontaktoplysninger for at nå os direkte.
+          Har du spørgsmål, eller ønsker du at komme i kontakt med os? <br> Vi står klar til at hjælpe dig. Udfyld formularen nedenfor, eller brug de angivne kontaktoplysninger for at nå os direkte.
         </p>
         <p>
           Du er også velkommen til at besøge os i vores studie i Silkeborg, hvor vi står klar til at rådgive dig personligt. Vi glæder os til at høre fra dig!
@@ -53,13 +55,13 @@
 
         <!--Spørgsmål/formular-->
         <div class="container">
-          <form action="action_page.php">
+          <form>
         
             <label for="fname">E-mail</label>
-            <input type="text" id="email" name="e-mail" placeholder="@">
+            <input type="text" id="email" name="e-mail" placeholder="Indtast email." style="font-family: 'Gilroy', sans-serif;">
            
             <label for="subject">Har du et spørgsmål?</label>
-            <textarea id="subject" name="subject" placeholder="Fortæl os hvad vi kan hjælpe dig med..." style="height:200px"></textarea>
+            <textarea style="font-family: 'Gilroy', sans-serif;" id="subject" name="subject" placeholder="Fortæl os hvad vi kan hjælpe dig med..." style="height:200px"></textarea>
         
             <input type="submit" value="Send">
 
@@ -158,6 +160,8 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/transition.js"></script>
+
 
 </body>
 </html>
