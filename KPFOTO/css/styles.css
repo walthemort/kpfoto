@@ -518,3 +518,47 @@ section[aria-labelledby="cta-title"] > * {
   margin: 0 auto; /* Centrerer indhold */
   padding: 20px; /* Giver indholdet luft */
 }
+
+/* Scroll Indicator Styles */
+.scroll-indicator {
+  position: relative;
+  margin-top: -20px;
+  text-align: center;
+  animation: bounce 2s infinite;
+  opacity: 1;
+  transition: opacity 0.5s ease; /* Glidende overgang */
+}
+
+.scroll-indicator.hidden {
+  opacity: 0; /* Fade out */
+  pointer-events: none; /* Ingen interaktion, når den er skjult */
+}
+
+.scroll-indicator img {
+  width: 50px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator img:hover {
+  opacity: 1;
+}
+
+/* Animation for bouncing */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+.scroll-indicator {
+  margin-top: 10px; /* Flytter det længere væk fra hero-sektionen */
+}
