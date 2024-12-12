@@ -432,6 +432,12 @@ footer p.copyright {
   text-align: center;
 }
 
+.footer-content .icon {
+  width: 24px;
+  height: 24px;
+  display: ;
+}
+
 
 /* Responsiveness */
 @media (max-width: 1200px) {
