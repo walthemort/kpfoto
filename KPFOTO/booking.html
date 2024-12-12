@@ -39,79 +39,70 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section aria-labelledby="hero-title">
-    <h1 id="hero-title">Fang dine <strong>momenter</strong> med os.</h1>
-    <p>Hver stund er værdifuld. Vi hjælper dig med at bevare de øjeblikke, der betyder mest.</p>
-    <p>Fra bryllupper til familieportrætter – vi sikrer, at dine minder varer hele livet.</p>
-  </section>
-
   <!-- Booking Section -->
   <main>
-    <section class="booking-section" aria-labelledby="booking-title">
-      <h1 id="booking-title">Book din fotosession</h1>
-      <form id="booking-form">
-        <label for="name">Navn:</label>
-        <input type="text" id="name" name="name" placeholder="Indtast dit navn" required />
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Indtast din e-mail" required />
-
-        <label for="date">Dato:</label>
-        <input type="date" id="date" name="date" required />
-
-        <label for="time">Tidspunkt:</label>
-        <select id="time" name="time" required>
-          <option value="" disabled selected>Vælg tidspunkt</option>
-          <option value="10:00">10:00</option>
-          <option value="12:00">12:00</option>
-          <option value="14:00">14:00</option>
-          <option value="16:00">16:00</option>
-        </select>
-
-        <label for="service">Vælg service:</label>
-        <select id="service" name="service" required>
-          <option value="" disabled selected>Vælg service</option>
-          <option value="wedding">Bryllupsfotografering</option>
-          <option value="portrait">Portrætfotografering</option>
-          <option value="family">Familiefotografering</option>
-        </select>
-
-        <button type="submit">Book nu</button>
+    <section class="booking-container">
+      <h4>Book din fotosession</h4>
+      <form class="booking-form">
+        <fieldset>
+          <legend>Vælg løsning</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="service" value="Bryllup"> Børnefotos</label>
+            <label><input type="checkbox" name="service" value="Børnehave"> Skolefoto</label>
+            <label><input type="checkbox" name="service" value="Skolefoto"> Bryllupsfoto</label>
+            <label><input type="checkbox" name="service" value="Konfirmation"> Restitution</label>
+            <label><input type="checkbox" name="service" value="Portræt"> Reklamefotos</label>
+            <label><input type="checkbox" name="service" value="Billedbehandling"> Konfirmation</label>
+          </div>
+        </fieldset>
+    
+        <fieldset>
+          <legend>Dato</legend>
+          <input type="date" name="date" class="date-picker">
+        </fieldset>
+    
+        <fieldset>
+          <legend>Dine informationer</legend>
+          <label for="name">Dit Navn:</label>
+          <input type="text" id="name" name="name" placeholder="Indast dit fulde navn her">
+          <label for="message">Din Besked:</label>
+          <textarea id="message" name="message" placeholder="Har du specifikke forespørgsler? Skriv dem her..."></textarea>
+        </fieldset>
+    
+        <button type="submit" class="submit-button">Send forespørgsel</button>
       </form>
-      <p id="confirmation" class="hidden"></p>
     </section>
+    
   </main>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-columns">
-      <!-- Kolonne 1: Kontaktinfo -->
-      <div class="footer-column">
-        <h2>Kontakt</h2>
+    <div class="footer-content">
+      <section>
+        <h4>Kontakt</h4>
         <p>📞 (+45) 29 66 50 24</p>
         <p>📧 <a href="mailto:kpfoto@webspeed.dk">kpfoto@webspeed.dk</a></p>
         <p>CVR: 37172642</p>
-      </div>
-      <!-- Kolonne 2: Nyhedsbrev -->
-      <div class="footer-column">
-        <h2>Hold dig opdateret</h2>
+      </section>
+      <section>
+        <h4>Hold dig opdateret</h4>
+        <p>Tilmeld dig vores nyhedsbrev</p>
         <form action="newsletter.php" method="POST">
-          <label for="email">Tilmeld dig vores nyhedsbrev</label>
-          <br />
           <input type="email" id="email" name="email" placeholder="Din e-mail" required />
           <button type="submit">Tilmeld</button>
         </form>
-      </div>
+      </section>
     </div>
-    <!-- Logo nederst -->
-    <div class="footer-logo">
-      <img src="assets/img/textlogo.png" alt="KP Foto logo" />
+    <div class="footer-logos">
+      <img src="assets/img/iconlogowh.png" alt="KP Foto logo 1" />
+      <img src="assets/img/textlogowh.png" alt="KP Foto logo 2" />
     </div>
-    <p>&copy; 2024 KP Foto</p>
-    <script src="js/footer.js"></script>
-    <script src="js/booking.js"></script>
+    <p class="copyright">&copy; 2024 KP Foto</p>
   </footer>
+
+  <script src="js/footer.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
   
   </body>
 </html>
