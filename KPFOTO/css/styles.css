@@ -596,3 +596,18 @@ section[aria-labelledby="cta-title"] > * {
 .scroll-indicator {
   margin-top: 10px; /* Flytter det længere væk fra hero-sektionen */
 }
+
+/* Animation for rotation af ikon i headerknap */
+.nav-right .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Afstand mellem tekst og ikon */
+}
+
+.nav-right .button img.plus-icon {
+  transition: transform 0.3s ease; /* Glidende animation */
+}
+
+.nav-right .button:hover img.plus-icon {
+  transform: rotate(360deg); /* Fuld rotation */
+}
