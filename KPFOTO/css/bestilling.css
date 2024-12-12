@@ -110,7 +110,7 @@ form button[type="submit"]:hover {
 
 .kundeoplysninger input {
     width: 100%;
-    padding: 10px;
+    padding: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -194,6 +194,8 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #476ea5;
 }
+
+
 
 /* Responsiv styling */
 @media (max-width: 768px) {
