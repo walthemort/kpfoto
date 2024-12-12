@@ -16,18 +16,19 @@
 
 /* Reset Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Gilroy', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #faf9f6;
-    margin: 0;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #faf9f6;
+  margin: 0;
+}
+
   
   /* Header Styles */
 header {
@@ -227,10 +228,10 @@ header {
     }
     
     .par {
+      padding-right: 100px;
       flex: 1 1 300px;
-      max-width: 500px;
-      padding: 20px;
-      margin-right: 100px;
+      max-width: 550px;
+      margin-right: 50px;
     }
     
     .par img {
@@ -277,9 +278,9 @@ header {
     }
     
     .parto {
+      padding-left: 100px;
       flex: 1 1 300px;
-      max-width: 500px;
-      padding: 20px;
+      max-width: 550px;
       margin: 0 auto; /* Centrerer billedet */
       margin-bottom: 50px; 
   }
@@ -506,6 +507,81 @@ footer p.copyright {
   margin-top: 10px;
   text-align: center;
 }
+
+/* Portfolio Section */
+
+section[aria-labelledby="portfolio-title"] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center; /* Centrerer overskrift og beskrivelse */
+}
+
+section[aria-labelledby="portfolio-title"] h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section[aria-labelledby="portfolio-title"] p.portfolio-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+/* Flexbox Container for Portfolio Items */
+section.hero article.indhold {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Individuelle Portefølje Items */
+section.hero article.indhold figure.Løsning {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+}
+
+section.hero article.indhold figure.Løsning img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+section.hero article.indhold figure.Løsning img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* Centrerede Titler og Tekster under Billeder */
+section.hero article.indhold figure.Løsning h3,
+section.hero article.indhold figure.Løsning p.Undertekst,
+section.hero article.indhold figure.Løsning p.LæsMere {
+  text-align: center;
+  margin: 10px 0;
+}
+
+section.hero article.indhold figure.Løsning h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+section.hero article.indhold figure.Løsning p.Undertekst {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+section.hero article.indhold figure.Løsning p.LæsMere {
+  color: #5c89c9;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
 
 /* Responsiv i mobilformat */
