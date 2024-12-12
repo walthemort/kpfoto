@@ -232,7 +232,22 @@ input[type=text], select, textarea {
   margin-top: 6px; 
   margin-bottom: 16px; 
   resize: vertical 
+
 }
+
+  /* Kontaktformular */
+  subject [type=text], textarea {
+    height: 200px;
+    width: 100%; 
+    padding: 10px; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  
+  }
+
 
 
 input[type=submit] {
