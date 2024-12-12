@@ -437,6 +437,21 @@ footer p.copyright {
   height: 24px;
 }
 
+.footer-payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer-payment-methods .payment-icon {
+  max-width: 80px;
+  max-height: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+
 
 /* Responsiveness */
 @media (max-width: 1200px) {
