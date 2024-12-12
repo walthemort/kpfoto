@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Tildel fade-in effekt til siden, når den indlæses
+    // Tilføjer en fade-in effekt til siden, når den indlæses
     document.body.classList.add('fade-in');
   
     // Find alle links

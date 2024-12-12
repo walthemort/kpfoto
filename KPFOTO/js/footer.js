@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const placeholder = document.querySelector('.placeholder')
     const footer = document.querySelector('footer')
   
-    // On DOMContentLoaded, set placeholder height to be equal to footer height
+    // Ved DOMContentLoaded, sætter den placeholder height til at matche footer height
     updateHeight()
   
     window.addEventListener('resize', onResize)
