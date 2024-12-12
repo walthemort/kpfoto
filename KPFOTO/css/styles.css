@@ -160,15 +160,31 @@ transform: translateY(0);
 header nav .button {
   background-color: #5c89c9;
   color: #fff;
-  padding: 6px 12px; 
+  padding: 3px 10px;
   border-radius: 5px;
   text-decoration: none;
   border: 2px solid #5c89c9;
   display: inline-flex; /* Sørger for, at tekst og ikon er på samme linje */
   align-items: center; 
   gap: 6px; /* Juster afstand mellem tekst og ikon */
-  line-height: 1; /* Fjerner ekstra højde fra tekstens linjeafstand */
   transition: all 0.3s;
+}
+
+header nav .button-border {
+  background-color: transparent;
+  color: #414141;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  border: 2px solid #5c89c9;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+header nav .button-border:hover {
+  opacity: 50%;
 }
 
 header nav .button img.plus-icon {
@@ -322,7 +338,7 @@ opacity: 50%;
 section[aria-labelledby="cta-title"] .button-border {
   background-color: #5c89c9;
   color: #fff;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   border: 2px solid #5c89c9;
