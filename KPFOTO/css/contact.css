@@ -242,6 +242,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: 'Gilroy', sans-serif;
 }
 
 
@@ -252,6 +253,7 @@ input[type=submit] {
   margin-left: 300px;
   margin-right: 300px;
   padding: 10px;
+  font-family: 'Gilroy', sans-serif;
 }
 
 /* main FAQ container */
@@ -266,6 +268,7 @@ input[type=submit] {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
+    font-family: 'Gilroy', sans-serif;
   }
   
   /* FAQ box */
@@ -287,6 +290,7 @@ input[type=submit] {
     cursor: pointer;
     position: relative;
     transition: background-color 0.3s ease; 
+    font-family: 'Gilroy', sans-serif;
   }
   
   /* Hover effect */
