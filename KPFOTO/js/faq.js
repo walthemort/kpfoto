@@ -1,30 +1,30 @@
-// Select all question buttons
+// Vælg alle spørgsmål
 const faqQuestions = document.querySelectorAll('.faq-question');
 
-// Loop through each question button
+// Loop genneem hvert spørgsmål
 faqQuestions.forEach(question => {
-    // Add a click event listener to each question
+    // Tilføjer em click event listener til hvert spørgsmål
     question.addEventListener('click', () => {
-        // Close any other open answers except the one clicked
+        // Lukker alle de andre spørgsmål, undtagen den der er klikket på
         faqQuestions.forEach(item => {
             if (item !== question) {
-                item.classList.remove('active'); // Remove 'active' class to reset arrow rotation
-                item.nextElementSibling.style.maxHeight = null; // Collapse the answer
+                item.classList.remove('active'); // Fjerner 'active' klassen for at nulstille pilens orientering.
+                item.nextElementSibling.style.maxHeight = null; // Lukker svaret
             }
         });
 
-        // Toggle 'active' class on the clicked question to rotate the arrow
+        // Skifter 'active' klassen til så pilen drejer
         question.classList.toggle('active');
 
-        // Select the corresponding answer div
+        // Vælger det rigtige svar
         const answer = question.nextElementSibling;
 
-        // Check if the answer is already open
+        // Tjekker om svaret allerede er åbent
         if (answer.style.maxHeight) {
-            // If open, close it by resetting max-height
+            // Hvis åbent, lukker den her ved at justere maxheight
             answer.style.maxHeight = null;
         } else {
-            // If closed, set max-height to scrollHeight to expand it
+            // Hvis lukket , sætter max-height til scrollHeight for at udvide
             answer.style.maxHeight = answer.scrollHeight + 'px';
         }
     });

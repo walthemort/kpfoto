@@ -6,7 +6,7 @@
   let currentIndex = 1;
 
   function updateCarousel() {
-    const itemWidth = items[0].offsetWidth + 20; // Include gap between items
+    const itemWidth = items[0].offsetWidth + 20;
     const offset = (carousel.offsetWidth - itemWidth) / 2 - currentIndex * itemWidth;
     carousel.style.transform = `translateX(${offset}px)`;
 
@@ -30,6 +30,5 @@
     updateCarousel();
   });
 
-  // Initial call to center carousel
   window.addEventListener("resize", updateCarousel);
   updateCarousel();
