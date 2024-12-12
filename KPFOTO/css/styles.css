@@ -401,6 +401,7 @@ footer input {
   color: #414141;
   width: 100%;
   max-width: 400px;
+  font-family: 'Gilroy', sans-serif;
 }
 
 footer button {
@@ -412,6 +413,7 @@ footer button {
   border-radius: 5px;
   font-weight: bold;
   margin-top: 10px;
+  font-family: 'Gilroy', sans-serif;
 }
 
 footer button:hover {
