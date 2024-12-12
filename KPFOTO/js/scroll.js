@@ -1,13 +1,13 @@
-// Select the scroll indicator
+// Vælger scroll ikonet
 const scrollIndicator = document.querySelector('.scroll-indicator');
 
-// Add a scroll event listener
+// Tilføjer en scroll event listener
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-    // Hide the scroll indicator when the user scrolls down
+    // Skjuler ikonet når brugeren scroller
     scrollIndicator.classList.add('hidden');
   } else {
-    // Show the scroll indicator if back at the top
+    // Viser ikonet igen når brugeren går til toppen af siden.
     scrollIndicator.classList.remove('hidden');
   }
 });
