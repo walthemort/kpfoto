@@ -236,8 +236,7 @@ width: 100%; /* Fylder hele containerens bredde */
 section[aria-labelledby="hero-title"] img {
   height: auto;
   width: 100%;
-  border-radius: 500px;
-  filter: saturate(30%);
+  border-radius: 30px;
   margin: 20px auto;
 }
 

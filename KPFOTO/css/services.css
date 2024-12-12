@@ -213,6 +213,14 @@ main {
     color: #5c89c9;
     cursor: pointer;
 }
+a {
+    text-decoration: none;
+    color: #5c89c9;
+}
+
+a:hover {
+    color: #cccc;
+}
 
 h1 {
     font-size: 3rem;
