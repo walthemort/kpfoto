@@ -3,6 +3,9 @@ body {
     font-family: 'Gilroy', sans-serif;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
                                                                 /* NAV BAR */
 header {
@@ -99,6 +102,13 @@ header {
     display: block; /* Sørger for at hvert menupunkt står lodret */
     margin: 0; /* Ingen ekstra gap */
     }
+
+    .divider {
+        width: 1150px;
+        height: 2px;
+        background-color: #333;
+        margin: 10px auto;
+    }
     
     .submenu li a {
     display: block; /* Gør links til blokke så de fylder hele bredden */
@@ -156,12 +166,12 @@ header {
 
                                                     /* Placering af billeder /main indholdet på siden */
 article {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 2.5rem 0;
-    justify-items: center; /* Centrerer indholdet i hver grid-celle */
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
 
 main {
     margin-top: 180px;
@@ -171,7 +181,7 @@ main {
 
 .Løsning {
     max-width: 1200px;
-    align-items: center;
+    
 }
 
 .hero {
@@ -208,6 +218,9 @@ h1 {
     font-size: 3rem;
     margin: 0;
     margin-top: -60px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 #tekst {
@@ -252,6 +265,146 @@ section[aria-labelledby="cta-title"] {
   section[aria-labelledby="cta-title"] .button:hover {
     background-color: #e3eaf5;
   }
+
+  /* Portfolio Section */
+
+/* Flexbox Container */
+section.hero article.indhold {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Individuelle Billeder og Tekster */
+section.hero article.indhold figure.Løsning {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center; /* Centrerer teksten inden i figure */
+}
+
+section.hero article.indhold figure.Løsning img {
+    padding-top: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+section.hero article.indhold figure.Løsning img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Centrerede titler og tekster */
+section.hero article.indhold figure.Løsning h3,
+section.hero article.indhold figure.Løsning p.Undertekst,
+section.hero article.indhold figure.Løsning p.LæsMere {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Specifik styling for h3 */
+section.hero article.indhold figure.Løsning h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Specifik styling for Undertekst */
+section.hero article.indhold figure.Løsning p.Undertekst {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Specifik styling for LæsMere */
+section.hero article.indhold figure.Løsning p.LæsMere {
+    color: #5c89c9;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsivt Design */
+
+/* To billeder pr. række på tablets */
+@media (max-width: 992px) {
+    section.hero article.indhold figure.Løsning {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    /* Sørg for at teksten også er centreret */
+    section.hero article.indhold figure.Løsning h3,
+    section.hero article.indhold figure.Løsning p.Undertekst,
+    section.hero article.indhold figure.Løsning p.LæsMere {
+        text-align: center;
+    }
+}
+
+/* Ét billede pr. række på mobile enheder */
+@media (max-width: 600px) {
+    section.hero article.indhold figure.Løsning {
+        flex: 1 1 100%;
+    }
+
+    /* Sørg for at teksten også er centreret */
+    section.hero article.indhold figure.Løsning h3,
+    section.hero article.indhold figure.Løsning p.Undertekst,
+    section.hero article.indhold figure.Løsning p.LæsMere {
+        text-align: center;
+    }
+}
+
+
+
+  /* Portfolio Section */
+
+section.hero article.indhold {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Fordeler pladsen jævnt mellem elementerne */
+    gap: 20px; /* Tilføjer afstand mellem elementerne */
+    max-width: 1200px; /* Maksimal bredde for layoutet */
+    margin: 0 auto; /* Centrerer portefølje-sektionen */
+    padding: 0 20px; /* Tilføjer lidt padding til siderne */
+}
+
+section.hero article.indhold figure.Løsning {
+    flex: 1 1 calc(33.333% - 20px); /* 3 på en række minus gap */
+    box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde */
+    margin: 0; /* Fjern eventuelle marginer */
+}
+
+section.hero article.indhold figure.Løsning img {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px; /* Gør hjørnerne runde */
+    transition: opacity 0.3s ease; /* Glidende overgang ved hover */
+}
+
+section.hero article.indhold figure.Løsning img:hover {
+    opacity: 0.5; /* Sætter opaciteten til 50% ved hover */
+    cursor: pointer; /* Ændrer cursor til en hånd ved hover */
+}
+
+/* Responsivt Design */
+
+/* To billeder pr. række på tablets */
+@media (max-width: 992px) {
+    section.hero article.indhold figure.Løsning {
+        flex: 1 1 calc(50% - 20px); /* 2 på en række minus gap */
+    }
+}
+
+/* Ét billede pr. række på mobile enheder */
+@media (max-width: 600px) {
+    section.hero article.indhold figure.Løsning {
+        flex: 1 1 100%; /* Fuldbredde */
+    }
+}
+
 
                                                             /* Responsiv til mobil */
 @media (max-width: 768px) {
