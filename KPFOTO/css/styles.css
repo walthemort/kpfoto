@@ -48,7 +48,7 @@ z-index: 999;
 background-color: transparent;
 padding: 20px 0;
 transition: background-color 0.3s ease, padding 0.3s ease;
-box-shadow: none;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Juster nav til at flugte med 1200px bredde */
@@ -473,10 +473,13 @@ nav.hidden {
   opacity: 0;
   transform: translateY(-50px);
   background-color: transparent;
+  box-shadow: none;
+
 }
 
 header.hidden {
   background-color: transparent;
+  box-shadow: none;
 }
 
 /* Fuld bredde baggrund for sektioner */
