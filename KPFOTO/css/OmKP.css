@@ -280,6 +280,7 @@ span {
   .missionPIC {
     flex: 1 1 300px;
     max-width: 500px;
+    max-height: 400px;
   }
   
   .missionPIC img {
@@ -296,7 +297,7 @@ span {
     padding: 20px;
     text-align: left;
     margin-left: 160px;
-    margin-top: -380px;
+    margin-top: -100px;
   }
   
   .mission-text h2 {
@@ -306,29 +307,36 @@ span {
   
 /* VORES ANMELDELSR */
 
-.anmeldelser {
+
+.bunden {
     background-color: #faf9f6; /* Lys baggrundsfarve */
     font-size: 3rem; /* Større tekst */
-    padding: 20px; 
-    max-width: 1200px; 
-    margin-left: auto; 
-    margin-right: auto; 
+    max-width: 1200px; /* Maksimal bredde for at holde elementet indenfor en grænse */
+    margin-left: auto; /* Centrer elementet horisontalt */
+    margin-right: auto; /* Centrer elementet horisontalt */
     text-align: center;
 }
-
-.anmeldelser h1 {
-    font-size: 4rem; 
-    color: #333; 
-    margin-bottom: 20px; 
-    border-bottom: 3px solid #000; 
+.bunden h1 {
+    font-size: 4rem; /* Større overskrift */
+    color: #414141; /* Mørk tekstfarve */
+    border-bottom: 1px solid #000; 
     padding-bottom: 10px; 
 }
 
-.anmeldelser h1 {
-    font-size: 4rem; 
-    color: #333; 
-    margin-bottom: 80px; 
+.bunden h1 {
+    font-size: 4rem; /* Større overskrift */
+    color: #414141; /* Mørk tekstfarve */
 }
+
+hr.divider {
+    width: 1200px;
+    height: 2px;
+    background-color: #414141;
+    border-bottom: 1px solid #000;
+    margin: 10px auto;
+    
+  }
+
   
   /* Responsiv design */
   @media (max-width: 768px) {
