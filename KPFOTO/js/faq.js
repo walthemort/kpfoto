@@ -16,7 +16,7 @@ faqQuestions.forEach(question => {
         // Toggle 'active' class on the clicked question to rotate the arrow
         question.classList.toggle('active');
 
-        // Select the corresponding answer div
+        // Select the corresponding answer section
         const answer = question.nextElementSibling;
 
         // Check if the answer is already open

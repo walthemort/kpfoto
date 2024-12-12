@@ -13,35 +13,38 @@
 
 </head>
 <body>
-  <!-- Header -->
-  <header role="banner">
-    <nav>
-      <div class="logo-container">
-        <a href="index.html" aria-label="Home">
-          <img src="assets/img/logo.png" alt="KP Foto logo" />
-        </a>
-      </div>
-      <ul>
-        <li><a href="booking.html" class="button-border">Book nu</a></li>
-        <li class="dropdown">
-          <a href="services.html">Løsninger <span class="arrow-down"></span></a>
-          <ul class="submenu">
-            <li><a href="boernefotos.html">Børnefotos</a></li>
-            <li><a href="skolefotos.html">Skolefotos</a></li>
-            <li><a href="bryllup.html">Bryllupsfoto</a></li>
-            <li><a href="restitution.html">Restitution</a></li>
-            <li><a href="reklamefotos.html">Reklamefotos</a></li>
-            <li><a href="konfirmation.html">Konfirmation</a></li>
-          </ul>
-        </li>
-        <li><a href="OmKP.html">Om KP Foto</a></li>
-        <li><a href="contact.html">Kontakt os</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="bestilling.html" class="button">Bestil billeder <img src="assets/icons/plusicon.png" alt="Plus ikon" class="plus-icon" /></a>
-      </div>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header role="banner">
+        <nav>
+            <section class="logo-container">
+                <a href="index.html" aria-label="Home">
+                    <img src="assets/img/logo.png" alt="KP Foto logo" />
+                </a>
+            </section>
+            <ul>
+                <li><a href="booking.html" class="button-border">Book nu</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Løsninger <span class="arrow-down"></span></a>
+                    <ul class="submenu">
+                        <li><a href="boernefotos.html">Børnefotos</a></li>
+                        <li><a href="skolefotos.html">Skolefotos</a></li>
+                        <li><a href="bryllup.html">Bryllupsfoto</a></li>
+                        <li><a href="restitution.html">Restitution</a></li>
+                        <li><a href="reklamefotos.html">Reklamefotos</a></li>
+                        <li><a href="konfirmation.html">Konfirmation</a></li>
+                    </ul>
+                </li>
+                <li><a href="OmKP.html">Om KP Foto</a></li>
+                <li><a href="contact.html">Kontakt os</a></li>
+            </ul>
+            <aside class="nav-right">
+                <a href="bestilling.html" class="button">
+                    Bestil billeder 
+                    <img src="assets/icons/plusicon.png" alt="Plus ikon" class="plus-icon" />
+                </a>
+            </aside>
+        </nav>
+    </header>
 
   
   <!-- Booking Section -->
@@ -49,32 +52,34 @@
     <section class="booking-container">
       <h4>Book din fotosession</h4>
       <form class="booking-form">
-        <fieldset>
+
+        <fieldset style="font-family: 'Gilroy', sans-serif;">
           <legend>Vælg løsning</legend>
-          <div class="checkbox-group">
+          <section class="checkbox-group">
             <label><input type="checkbox" name="service" value="Bryllup"> Børnefotos</label>
             <label><input type="checkbox" name="service" value="Børnehave"> Skolefoto</label>
             <label><input type="checkbox" name="service" value="Skolefoto"> Bryllupsfoto</label>
             <label><input type="checkbox" name="service" value="Konfirmation"> Restitution</label>
             <label><input type="checkbox" name="service" value="Portræt"> Reklamefotos</label>
             <label><input type="checkbox" name="service" value="Billedbehandling"> Konfirmation</label>
-          </div>
+          </section>
         </fieldset>
+
     
         <fieldset>
           <legend>Dato</legend>
-          <input type="date" name="date" class="date-picker">
+          <input style="font-family: 'Gilroy', sans-serif;" type="date" name="date" class="date-picker">
         </fieldset>
     
         <fieldset>
           <legend>Dine informationer</legend>
           <label for="name">Dit Navn:</label>
-          <input type="text" id="name" name="name" placeholder="Indast dit fulde navn her">
-          <label for="message">Din Besked:</label>
-          <textarea id="message" name="message" placeholder="Har du specifikke forespørgsler? Skriv dem her..."></textarea>
+          <input style="font-family: 'Gilroy', sans-serif;" type="text" id="name" name="name" placeholder="Indast dit fulde navn her">
+          <label  for="message">Din Besked:</label>
+          <textarea style="font-family: 'Gilroy', sans-serif;" id="message" name="message" placeholder="Har du specifikke forespørgsler? Skriv dem her..."></textarea>
         </fieldset>
     
-        <button type="submit" class="submit-button">Send forespørgsel</button>
+        <button style="font-family: 'Gilroy', sans-serif;" type="submit" class="submit-button">Send forespørgsel</button>
       </form>
     </section>
 

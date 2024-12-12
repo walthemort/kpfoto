@@ -422,6 +422,15 @@ input[type=submit] {
       margin-top: 10px;
       text-align: center;
     }
+
+
+
+/* Styling for container */
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
     
     
     /* Responsiveness */
