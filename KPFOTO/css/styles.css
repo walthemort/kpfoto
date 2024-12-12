@@ -48,7 +48,6 @@ z-index: 999;
 background-color: transparent;
 padding: 20px 0;
 transition: background-color 0.3s ease, padding 0.3s ease;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Juster nav til at flugte med 1200px bredde */
@@ -187,6 +186,7 @@ opacity: 50%;
 header.scrolled {
   background-color: #ffffff;
 padding: 10px 0;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header.bottom {
@@ -204,14 +204,16 @@ padding: 0 20px;
 
 /* Hero Section */
 section[aria-labelledby="hero-title"] {
-text-align: left; /* Kan justeres hvis du vil have teksten til venstre */
-padding: 60px 0;
 background-color: #faf9f6;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 section[aria-labelledby="hero-title"] h1 {
+  align-items: left;
+text-align: left;
 font-size: 2.5rem;
-margin-bottom: 20px;
 }
 
 section[aria-labelledby="hero-title"] h1 strong {
@@ -232,10 +234,11 @@ width: 100%; /* Fylder hele containerens bredde */
 }
 
 section[aria-labelledby="hero-title"] img {
-display: block;
-width: 100%;
-border-radius: 10px;
-filter: saturate(30%);
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  filter: saturate(30%);
+  margin: 20px auto;
 }
 
 /* Portfolio Section */
@@ -427,6 +430,11 @@ footer p.copyright {
   font-size: 0.9rem;
   margin-top: 10px;
   text-align: center;
+}
+
+.footer-content .icon {
+  width: 24px;
+  height: 24px;
 }
 
 
