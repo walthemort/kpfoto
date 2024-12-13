@@ -52,7 +52,7 @@
   <main>
     <section class="booking-container">
       <h4>Book din fotosession</h4>
-      <form class="booking-form">
+      <form id="serviceForm" class="booking-form">
 
         <fieldset style="font-family: 'Gilroy', sans-serif;">
           <legend>Vælg løsning</legend>
@@ -63,22 +63,34 @@
             <label><input type="checkbox" name="service" value="Konfirmation"> Restitution</label>
             <label><input type="checkbox" name="service" value="Portræt"> Reklamefotos</label>
             <label><input type="checkbox" name="service" value="Billedbehandling"> Konfirmation</label>
+            <label><input type="checkbox" name="service" value="Billedbehandling"> Andet</label>
           </section>
+          <p class="error-message" id="errorMessage">Du skal vælge mindst én løsning.</p>
         </fieldset>
-
-    
+        
         <fieldset>
           <legend>Dato</legend>
           <input style="font-family: 'Gilroy', sans-serif;" type="date" name="date" class="date-picker">
+          <p class="error-message" id="errorDate">Du skal vælge en dato.</p>
         </fieldset>
     
         <fieldset>
           <legend>Dine informationer</legend>
           <label for="name">Dit Navn:</label>
           <input style="font-family: 'Gilroy', sans-serif;" type="text" id="name" name="name" placeholder="Indast dit fulde navn her">
+          <p class="error-message" id="errorName">Du skal indtaste dit navn.</p>
           <label  for="message">Din Besked:</label>
           <textarea style="font-family: 'Gilroy', sans-serif;" id="message" name="message" placeholder="Har du specifikke forespørgsler? Skriv dem her..."></textarea>
         </fieldset>
+
+        <!-- Lightbox -->
+<div id="lightbox" class="lightbox-overlay">
+  <div class="lightbox-content">
+    <h2>Din forespørgsel er sendt!</h2>
+    <p>Vi stræber os efter at svarer på alle forespørgsler indenfor 24 timer.</p>
+    <button id="closeLightbox">Luk</button>
+  </div>
+</div>
     
         <button style="font-family: 'Gilroy', sans-serif;" type="submit" class="submit-button">Send forespørgsel</button>
       </form>
@@ -131,8 +143,11 @@
     <p class="copyright">&copy; 2024 KP Foto</p>
   </footer>
 
-  <script src="js/booking.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/lightbox.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/checkbox.js"></script>
+
 
   
   </body>
