@@ -37,124 +37,6 @@
 
     margin: 0;
   }
-  
-/* Header Styles */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: #faf9f6;
-    padding: 20px 0;
-    transition: background-color 0.3s ease, padding 0.3s ease;
-    box-shadow: none;
-    }
-    
-    /* Juster nav til at flugte med 1200px bredde */
-    header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto; /* Centrerer nav */
-    padding: 0 20px;
-    }
-    
-    .logo-container {
-    width: 232px; 
-    height: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    }
-    
-    .logo-container img {
-    width: auto;
-    height: 100%;
-    object-fit: contain;
-    transform: scale(0.25);
-    transform-origin: center center;
-    margin-top: 10px;
-    }
-    
-    header nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 20px;
-    }
-    
-    header nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    }
-    
-    /* Pil ved "Løsninger" */
-    .arrow-down {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid #414141;
-    border-bottom: 2px solid #414141;
-    transform: rotate(45deg);
-    margin-left: 5px;
-    margin-bottom: 3px;
-    }
-    
-    .dropdown {
-    position: relative;
-    }
-    
-    .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    min-width: 180px;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    
-    /* Vigtig: Gør menuen lodret ved at sikre block display */
-    display: block;
-    
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-    z-index: 999;
-    }
-    
-    .submenu li {
-    display: block; /* Sørger for at hvert menupunkt står lodret */
-    margin: 0; /* Ingen ekstra gap */
-    }
-    
-    .submenu li a {
-    display: block; /* Gør links til blokke så de fylder hele bredden */
-    padding: 10px 20px;
-    color: #414141;
-    text-decoration: none;
-    font-weight: 500;
-    white-space: nowrap; /* For at forhindre at tekst bryder linjen unødvendigt */
-    }
-    
-    .submenu li a:hover {
-    background-color: #f1f1f1;
-    color: #333;
-    }
-    
-    /* Når man hover over forældre-elementet, vis submenu */
-    .dropdown:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    }
     
     
 /*MAIN AL SIDENS INDHOLD */
@@ -306,19 +188,6 @@ hr.divider {
   }
 
   
-  /* Responsiv design */
-  @media (max-width: 768px) {
-    .KPfoto,
-    .mission {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .KPhvem,
-    .mission-text {
-      text-align: center;
-    }
-  }
 
 
 
@@ -438,18 +307,7 @@ footer {
   }
   
   
-  /* Responsiveness */
-  @media (max-width: 1200px) {
-    footer .footer-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    footer .footer-content > section {
-      margin-bottom: 20px;
-    }
-  }
+
   
   main {
     position: relative;
@@ -551,3 +409,142 @@ footer {
     background-color: #476ea5;
   }
   
+  /* Responsiv design */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo-container {
+    width: 150px;
+    height: auto;
+  }
+
+  .logo-container img {
+    transform: scale(0.5);
+    margin-top: 5px;
+  }
+
+  header nav a {
+    font-size: 16px;
+  }
+
+  /* Justering af hero sektionen */
+  .OMKP {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .OMKP h1 {
+    font-size: 3rem;
+  }
+
+  /* KPfoto*/
+  .KPfoto {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .KPhvem, 
+  .kamera {
+    max-width: 100%;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .kamera img {
+    height: auto;
+  }
+
+ 
+  .mission {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .mission-text {
+    text-align: center;
+    margin: 0;
+  }
+
+  .mission-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .missionPIC {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .missionPIC img {
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  footer .footer-content > section {
+    text-align: center;
+  }
+
+  footer h2 {
+    font-size: 2.5rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 1.25rem;
+  }
+
+  footer input,
+  footer button {
+    font-size: 1.25rem;
+    padding: 10px;
+    max-width: 300px;
+  }
+
+  footer .logo-container img {
+    max-width: 200px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  header nav a {
+    font-size: 14px;
+  }
+
+  .OMKP {
+    font-size: 1.5rem;
+  }
+
+  .OMKP h1 {
+    font-size: 2.5rem;
+  }
+
+  footer h2 {
+    font-size: 2rem;
+  }
+
+  footer p,
+  footer a {
+    font-size: 1rem;
+  }
+}

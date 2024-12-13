@@ -598,6 +598,10 @@ section[aria-labelledby="cta-title"] > * {
 .nav-right .button:hover img.plus-icon {
   transform: rotate(360deg); /* Fuld rotation */
 }
+.scroll-indicator img:active {
+  transform: scale(0.9); /* Mindre tryk-animation */
+  transition: transform 0.2s ease;
+}
 
 /* -----------------------------------
    Responsive Footer Styles
@@ -733,4 +737,9 @@ section[aria-labelledby="cta-title"] > * {
     max-width: 100px;
     max-height: 25px;
   }
+}
+
+.scroll-indicator img:active {
+  transform: scale(0.9); /* Mindre tryk-animation */
+  transition: transform 0.2s ease;
 }
