@@ -277,8 +277,6 @@ height: 100%;
 object-fit: cover;
 }
 
-section[aria-labelledby="portfolio-title"] figcaption {
-}
 
 /* Call to Action Section */
 section[aria-labelledby="cta-title"] {
