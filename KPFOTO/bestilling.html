@@ -101,10 +101,10 @@
           <h3>Billedbestillinger</h3>
           <section id="billedeBestillingContainer" class="billede-bestilling-container">
             <article class="billedeBestilling">
-              <label for="billedeNr">Billede nr</label>
-              <input type="text" name="billedeNr[]" placeholder="Billede nr." required>
+              <label for="billedeNummer">Billede nr:</label>
+              <input type="text" name="billedeNr" placeholder="Billede nr." required>
 
-              <label for="stoerrelse">Størrelse:</label>
+              <label for="stoerrelser">Størrelse:</label>
               <select name="stoerrelse[]">
                 <option value="9x12">9x12</option>
                 <option value="13x18">13x18</option>
@@ -114,13 +114,13 @@
                 <option value="Poster">Poster</option>
               </select>
       
-              <label for="antal">Antal:</label>
+              <label for="antál">Antal:</label>
               <input type="number" name="antal[]" placeholder="Antal" min="1" required>
       
-              <label for="farve">Farve:</label>
+              <label for="farver">Farve:</label>
               <input type="checkbox" name="farve[]">
       
-              <label for="sortHvid">Sort/hvid:</label>
+              <label for="sortogHvid">Sort/hvid:</label>
               <input type="checkbox" name="sortHvid[]">
             </article>
           </section>
@@ -149,7 +149,7 @@
         <h4>Hold dig opdateret</h4>
         <p>Tilmeld dig vores nyhedsbrev</p>
         <form action="newsletter.php" method="POST">
-          <input id="email" placeholder="Din e-mail" required />
+          <input id="emailfooter" placeholder="Din e-mail" required />
           <button type="submit">Tilmeld</button>
         </form>
       </section>
