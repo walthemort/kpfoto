@@ -210,7 +210,6 @@ align-items: center;
 }
 
 section[aria-labelledby="hero-title"] h1 {
-  align-items: left;
 text-align: left;
 font-size: 2.5rem;
 }
@@ -425,7 +424,6 @@ footer .logo-container img {
 }
 
 footer .footer-logos {
-  display: show;
   justify-content: center;
   gap: 20px;
   margin: 20px 0;
