@@ -209,6 +209,7 @@ flex-direction: column;
 align-items: center;
 }
 
+
 section[aria-labelledby="hero-title"] h1 {
 text-align: left;
 font-size: 2.5rem;
@@ -235,6 +236,23 @@ section[aria-labelledby="hero-title"] img {
   width: 100%;
   border-radius: 30px;
   margin: 20px auto;
+}
+
+.herosection {
+  background-color: #faf9f6;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.herosection img {
+  height: auto;
+  width: 100%;
+  border-radius: 30px;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+
 }
 
 /* Portfolio Section */
