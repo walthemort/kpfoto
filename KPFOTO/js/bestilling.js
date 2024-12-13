@@ -7,8 +7,8 @@ document.getElementById('kodeForm').addEventListener('submit', function(e) {
     const bestillingsformular = document.getElementById('bestillingsformular');
   
     const koder = {
-      'KODE123': ['2.png', '4.png', '6.png'],
-      'FOTO2024': ['image4.jpg', 'image5.jpg', 'image6.jpg']
+      'KODE123': ['2.webp', '4.webp', '6.webp'],
+      'FOTO2024': ['image4.webp', 'image5.webp', 'image6.webp']
     };
   
     if (koder[kode]) {
