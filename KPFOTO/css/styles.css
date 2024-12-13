@@ -611,3 +611,8 @@ section[aria-labelledby="cta-title"] > * {
 .nav-right .button:hover img.plus-icon {
   transform: rotate(360deg); /* Fuld rotation */
 }
+
+.scroll-indicator img:active {
+  transform: scale(0.9); /* Mindre tryk-animation */
+  transition: transform 0.2s ease;
+}
