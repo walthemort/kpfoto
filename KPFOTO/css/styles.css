@@ -743,3 +743,61 @@ section[aria-labelledby="cta-title"] > * {
   transform: scale(0.9); /* Mindre tryk-animation */
   transition: transform 0.2s ease;
 }
+
+.error-message {
+  color: red;
+  font-family: 'Gilroy', sans-serif;
+  display: none; /* Start som skjult */
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+/* Lightbox styling */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; /* Skjult som standard */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Sørg for, at den ligger øverst */
+}
+
+.lightbox-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Gilroy', sans-serif;
+}
+
+.lightbox-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.lightbox-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #414141;
+}
+
+.lightbox-content button {
+  background-color: #5c89c9;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lightbox-content button:hover {
+  background-color: #476ea5;
+}
