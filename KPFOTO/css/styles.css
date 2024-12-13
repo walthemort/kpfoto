@@ -1,20 +1,5 @@
-/* Her er din nuværende CSS uden ændringer */
 
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/KPFOTO/assets/fonts/Gilroy-Light.otf') format('woff2'),
-       url('/KPFOTO/assets/fonts/Gilroy-ExtraBold.otf') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'GilroyFed';
-  src: url('assets/fonts/Gilroy-Bold.woff2') format('woff2'),
-       url('assets/fonts/Gilroy-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
 
 /* Reset Styles */
 * {
@@ -176,8 +161,6 @@ header nav .button-border {
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
-  font-family: 'Gilroy', sans-serif;
-  font-weight: 700;
   border: 2px solid #5c89c9;
   margin-right: 10px;
   transition: all 0.3s;
@@ -235,7 +218,6 @@ font-size: 2.5rem;
 section[aria-labelledby="hero-title"] h1 strong {
 color: #5c89c9;
   font-family: 'GilroyFed', sans-serif;
-  font-weight: 700; /* Bruger den fede variant */
 }
 
 section[aria-labelledby="hero-title"] p {
@@ -296,7 +278,6 @@ object-fit: cover;
 }
 
 section[aria-labelledby="portfolio-title"] figcaption {
-  font-weight: 700;
 }
 
 /* Call to Action Section */
@@ -324,8 +305,6 @@ color: #414141;
 padding: 10px 20px;
 border-radius: 5px;
 text-decoration: none;
-font-family: 'Gilroy', sans-serif;
-font-weight: 700;
 border: 2px solid #5c89c9;
 margin-right: 10px;
 transition: all 0.3s;
