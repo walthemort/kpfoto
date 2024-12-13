@@ -486,19 +486,6 @@ footer p.copyright {
 
 
 
-/* Responsiveness */
-@media (max-width: 1200px) {
-  footer .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  footer .footer-content > section {
-    margin-bottom: 20px;
-  }
-}
-
 main {
   position: relative;
   z-index: 10;
@@ -610,6 +597,146 @@ section[aria-labelledby="cta-title"] > * {
 
 .nav-right .button:hover img.plus-icon {
   transform: rotate(360deg); /* Fuld rotation */
+}
+.scroll-indicator img:active {
+  transform: scale(0.9); /* Mindre tryk-animation */
+  transition: transform 0.2s ease;
+}
+
+/* -----------------------------------
+   Responsive Footer Styles
+----------------------------------- */
+
+/* Tablets og Små Desktopskærme (max-width: 1199px) */
+@media (max-width: 1199px) {
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .footer-content > section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  footer .footer-logos {
+    gap: 15px;
+  }
+
+  footer .footer-payment-methods {
+    gap: 15px;
+  }
+
+  footer h4 {
+    font-size: 2.5rem;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  footer input {
+    padding: 15px;
+    font-size: 1.2rem;
+    max-width: 300px;
+  }
+
+  footer button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+
+  /* Juster logoer og betalingsikoner */
+  footer .footer-logos img,
+  footer .footer-payment-methods .payment-icon {
+    max-width: 150px;
+    max-height: 40px;
+  }
+}
+
+/* Mobile Enheder (max-width: 767px) */
+@media (max-width: 767px) {
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  footer .footer-content > section {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  footer .footer-logos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .footer-payment-methods {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer h4 {
+    font-size: 2rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  footer input {
+    padding: 10px;
+    font-size: 1rem;
+    max-width: 250px;
+  }
+
+  footer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  /* Juster logoer og betalingsikoner */
+  footer .footer-logos img,
+  footer .footer-payment-methods .payment-icon {
+    max-width: 120px;
+    max-height: 35px;
+  }
+}
+
+/* Ekstremt Små Mobile Enheder (max-width: 399px) */
+@media (max-width: 399px) {
+  footer .footer-content {
+    padding: 20px 10px;
+  }
+
+  footer h4 {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  footer input {
+    padding: 8px;
+    font-size: 0.9rem;
+    max-width: 200px;
+  }
+
+  footer button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Juster logoer og betalingsikoner */
+  footer .footer-logos img,
+  footer .footer-payment-methods .payment-icon {
+    max-width: 100px;
+    max-height: 25px;
+  }
 }
 
 .scroll-indicator img:active {
