@@ -172,10 +172,6 @@ body {
   border-bottom: 1px solid #000; 
   padding-bottom: 10px; 
 }
-
-
-
-
   
   
   /* Carousel Styles */
@@ -211,117 +207,7 @@ body {
     background-color: #476ea5;
   }
 
-  /* Footer Styles */
-footer {
-  background-color: #414141;
-  color: #fff;
-  min-height: 500px; /* Dynamisk højde, minimum 500px */
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  z-index: 5;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Start indholdet fra toppen */
-  align-items: center;
-  padding: 40px 20px; /* Luft omkring indholdet */
-  overflow: visible; /* Sørg for, at intet indhold bliver skåret */
-}
 
-
-footer .footer-content {
-  flex: none;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-}
-
-footer .footer-content > section {
-  flex: 1;
-  text-align: left;
-}
-
-
-footer h2 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-}
-
-footer p {
-  font-size: 1.5rem;
-  margin: 5px 0;
-}
-
-footer a {
-  color: #5c89c9;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer form {
-  margin-top: 10px;
-}
-
-footer input {
-  font-size: 1.5rem;
-  padding: 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #cccccc;
-  color: #414141;
-  width: 100%;
-  max-width: 400px;
-}
-
-footer button {
-  font-size: 1.5rem;
-  padding: 20px 40px;
-  background-color: #5c89c9;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-footer button:hover {
-  background-color: #476ea5;
-}
-
-footer .logo-container {
-  text-align: center;
-  margin: 20px 0;
-}
-
-footer .logo-container img {
-  max-width: 400px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-footer .footer-logos {
-  display: show;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px 0;
-}
-
-footer .footer-logos img {
-  max-height: 500px;
-  width: auto;
-}
-
-footer p.copyright {
-  font-size: 0.9rem;
-  margin-top: 10px;
-  text-align: center;
-}
 
 /* Portfolio Section */
 
@@ -428,51 +314,81 @@ main {
 
 
 @media (max-width: 768px) {
-  /* Bryllup løsninger */
+
+  /* Løsninger på alle */
   #bryllup-løsninger, .førstepakker, .andenpakker, .Pakke, .mission-text, .bryllup {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-}
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+  }
 
-/* Billederne i første sektion */
+  /* Justering for første sektion */
+  .parto img {
+      width: 80%; /* Reducer størrelsen på billederne */
+      height: auto;
+      margin: 0 auto;
+      display: block;
+  }
 
+  /* Justering af tekststørrelse */
+  h1, h2, h3 {
+      font-size: 1.8rem; 
+  }
 
-.parto img {
-    width: 80%; /* Reducer størrelsen på billederne */
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
+  .størrelse, .price, .subtext1, .subtext2 {
+      font-size: 1rem; /* Reducer tekststørrelsen */
+      line-height: 1.5; /* Mellemrum mellem linjer */
+      text-align: center; /* Center tekst på mobil */
+  }
 
-/* Justering af tekststørrelse */
-h1, h2, h3 {
-    font-size: 1.8rem; /* Reducer størrelsen på overskrifter */
-}
+  .price a {
+      font-size: 1.2rem; /* Lidt mindre skrift på links */
+  }
 
-.størrelse, .price, .subtext1, .subtext2 {
-    font-size: 1rem; /* Reducer tekststørrelsen */
-    line-height: 1.5; /* Mellemrum mellem linjer */
-    text-align: center; /* Center tekst på mobil */
-}
+  /* Mellemrum til justering af layout */
+  .Pakke, .mission-text {
+      margin-top: 30px;
+  }
 
-.price a {
-    font-size: 1.2rem; /* Lidt mindre skrift på links */
-}
-
-/* Mellemrum til justering af layout */
-.Pakke, .mission-text {
-    margin-top: 30px;
-}
-
-/* Ensartet afstand på sektionerne */
-section {
-    margin-bottom: 40px;
-}
+  /* Ensartet afstand på sektionerne */
+  section {
+      margin-bottom: 40px;
+  }
 
   /* Divider */
   .divider {
       width: 100%; /* Divider strækker sig over hele bredden på mobilen */
       margin: 20px 0;
+  }
+
+  /* Justering for Pakke 1 og 2 */
+  .førstepakker {
+      flex-direction: column; /* Skifter layout til kolonner */
+      align-items: center; /* Centrerer indholdet */
+      gap: 20px; /* Mellemrum mellem pakkerne */
+      margin-left: 0; /* Fjerner unødig venstremargen */
+      width: 100%; /* Tilpas bredde til mobil */
+      margin-top: 20px; /* Giv luft foroven */
+  }
+
+  .Pakke {
+      max-width: 90%; /* Reducerer bredden for bedre pasning */
+      margin: 0 auto; /* Centrer pakkerne */
+      margin-bottom: 20px; /* Ekstra luft under hver pakke */
+      text-align: center; /* Centrerer tekst */
+  }
+
+  .Pakke img {
+      width: 100%; /* Tilpas billeder til mobilvisning */
+      border-radius: 8px; /* Bevar rundede hjørner */
+  }
+
+  .Pakke h3 {
+      font-size: 1.5rem; /* Reduceret overskriftsstørrelse */
+  }
+
+  .Pakke p {
+      font-size: 1rem; /* Mindre tekststørrelse */
+      line-height: 1.5; /* Forbedret læsbarhed */
   }
 }

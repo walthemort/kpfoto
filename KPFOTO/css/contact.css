@@ -341,3 +341,55 @@ input[type=submit] {
       height: 450px; /* samme højde som footer */
       display: none; /* Skjul placeholder i toppen */
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0 10px;
+      }
+    
+      main {
+        margin: 20px auto;
+        padding: 10px;
+      }
+    
+      main h1 {
+        font-size: 2rem; /* Mindre overskrift til mobil */
+      }
+    
+      main p {
+        font-size: 0.9rem; /* Reduceret tekststørrelse */
+      }
+    
+      hr.divider {
+        width: 90%; /* Fleksibel bredde */
+      }
+    
+      .container {
+        margin: 20px auto; /* Fjern faste marginer */
+        padding: 10px;
+      }
+    
+      input[type=text], select, textarea {
+        font-size: 1rem; /* Bedre læsbarhed */
+      }
+    
+      input[type=submit] {
+        padding: 10px 15px; /* Mindre knapper */
+        font-size: 1rem;
+      }
+    
+      /* FAQ Responsiv Justering */
+      .faq-container {
+        width: 100%; /* Brug fuld bredde */
+        padding: 10px;
+      }
+    
+      .faq-question {
+        font-size: 0.9rem; /* Mindre skrifttype */
+        padding: 15px;
+      }
+    
+      .faq-answer p {
+        font-size: 0.8rem; /* Reducer tekst i svar */
+      }
+    }
