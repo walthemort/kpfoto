@@ -1,0 +1,25 @@
+# robots.txt for https://www.kpfoto.dk/
+
+# Tillad alle crawlers adgang til hele siden
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /scripts/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /assets/icons/
+Allow: /assets/img/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/fonts/
+
+# Sitemap location
+Sitemap: https://www.kpfoto.dk/sitemap.xml
+
+# Specifikke regler for Googlebot
+User-agent: Googlebot
+Disallow: /no-google/
+
+# Specifikke regler for Bingbot
+User-agent: Bingbot
+Disallow: /no-bing/
